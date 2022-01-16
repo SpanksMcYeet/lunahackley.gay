@@ -1,0 +1,373 @@
+body {
+    text-align: center;
+    background: rgb(63,94,251);
+    background: radial-gradient(circle, rgb(42,71,214) 0%, rgba(252,70,107,1) 100%);
+      background-size: 400% 400%;
+      animation: gradient 30s ease-in-out infinite;
+  }
+  @keyframes gradient {
+      0% {background-position: 0% 50%}
+      50% {background-position: 100% 50%}
+      100% {background-position: 0% 50%}
+  }
+  div {
+    display: block;
+    position: absolute;
+  }
+  /*.widget {
+    transform: translate(-140%,0%)
+  }*/
+  .container {
+    width: 320px;
+    height: 320px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%)
+  }
+  .luna {
+    width: 125%;
+    height: 100%;
+    display: flex;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 90px;
+    font-weight: 1000;
+    align-content: center;
+    background/*-image*/: linear-gradient(-45deg, #726999, #A99DE2, #688AE9, #758FD6, #78CCE2, #87C0B4); /*url('https://media.giphy.com/media/LUk0ofIlbDb68/200.gif');*/
+    background-size: 300%;
+    opacity: 0;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      -webkit-animation: text 3s ease-in-out;
+    -webkit-animation-fill-mode: forwards; 
+    -webkit-animation-delay: 0.75s;
+  }
+  @keyframes text {
+      0% {
+      background-position: 0px 50%;
+      clip-path: circle(0%);
+      opacity: 1;
+    }
+      100% {
+      background-position: 0px 50%;
+      clip-path: circle(100%);
+      opacity: 1;
+    }
+  }
+  
+  .float {
+    display: inline-block;
+    vertical-align: middle;
+    transform: translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    backface-visibility: hidden;
+    transition-duration: 0.3s;
+    transition-property: transform;
+    transition-timing-function: ease-out;
+  }
+  .float:hover,
+  .float:focus,
+  .float:active {
+    transform: translateY(-8px);
+  }
+  @keyframes spinInRight {
+    0% {
+      opacity: 0;
+      animation-timing-function: cubic-bezier(0.23, 1, 0.32, 1);
+      transform: rotateZ(0deg) scale3d(0, 0, 0);
+      transform-origin: center center; 
+    }
+    50% {opacity: 0.7}
+    70% {
+      transform: rotateZ(360deg) scale3d(1, 1, 1);
+      transform-origin: center center; 
+      opacity: 0.7
+    }
+    100% {
+      transform: rotateZ(360deg) scale3d(1, 1, 1);
+      transform-origin: center center; 
+      opacity: 0.7
+    } 
+  }
+  @keyframes spinInLeft {
+    0% {
+      opacity: 0;
+      animation-timing-function: cubic-bezier(0.23, 1, 0.32, 1);
+      transform: rotateZ(0deg) scale3d(0, 0, 0);
+      transform-origin: center center; 
+    }
+    50% {opacity: 0.7}
+    70% {
+      transform: rotateZ(-360deg) scale3d(1, 1, 1);
+      transform-origin: center center; 
+      opacity: 0.7
+    }
+    100% {
+      transform: rotateZ(-360deg) scale3d(1, 1, 1);
+      transform-origin: center center; 
+      opacity: 0.7
+    }
+  }
+  .circle {
+    width: 20%;
+    height: 35%;
+    transform: translate(250%,125%);
+    filter: invert(100%) hue-rotate(0deg) brightness(100%) contrast(100%)
+  }
+  
+  .icon:nth-child(1) {transform: rotate(32.72deg) translateX(250px) rotate(-32.72deg)}
+  .icon:nth-child(2) {transform: rotate(65.45deg) translateX(250px) rotate(-65.45deg)}
+  .icon:nth-child(3) {transform: rotate(98.18deg) translateX(250px) rotate(-98.18deg)}
+  .icon:nth-child(4) {transform: rotate(130.90deg) translateX(250px) rotate(-130.90deg)}
+  .icon:nth-child(5) {transform: rotate(163.63deg) translateX(250px) rotate(-163.63deg)}
+  .icon:nth-child(6) {transform: rotate(196.32deg) translateX(250px) rotate(-196.32deg)}
+  .icon:nth-child(7) {transform: rotate(229.04deg) translateX(250px) rotate(-229.04deg)}
+  .icon:nth-child(8) {transform: rotate(261.76deg) translateX(250px) rotate(-261.76deg)}
+  .icon:nth-child(9) {transform: rotate(294.48deg) translateX(250px) rotate(-294.48deg)}
+  .icon:nth-child(10) {transform: rotate(327.20deg) translateX(250px) rotate(-327.20deg)}
+  .icon:nth-child(11) {transform: rotate(359.92deg) translateX(250px) rotate(-359.92deg)}
+  
+  .circle .icon:nth-child(1) img {
+    animation: spinInLeft 3s;
+    animation-delay: 2.75s;
+    animation-fill-mode: forwards; 
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    opacity: 0;
+  }
+  .circle .icon:nth-child(2) img {
+    animation: spinInRight 3s;
+    animation-delay: 3.0s;
+    animation-fill-mode: forwards; 
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    opacity: 0;
+  }
+  .circle .icon:nth-child(3) img {
+    animation: spinInLeft 3s;
+    animation-delay: 3.25s;
+    animation-fill-mode: forwards; 
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    opacity: 0;
+  }
+  .circle .icon:nth-child(4) img {
+    animation: spinInRight 3s;
+    animation-delay: 3.5s;
+    animation-fill-mode: forwards; 
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    opacity: 0;
+  }
+  .circle .icon:nth-child(5) img {
+    animation: spinInLeft 3s;
+    animation-delay: 3.75s;
+    animation-fill-mode: forwards; 
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    opacity: 0;
+  }
+  .circle .icon:nth-child(6) img {
+    animation: spinInRight 3s;
+    animation-delay: 4.0s;
+    animation-fill-mode: forwards; 
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    opacity: 0;
+  }
+  .circle .icon:nth-child(7) img {
+    animation: spinInLeft 3s;
+    animation-delay: 4.25s;
+    animation-fill-mode: forwards; 
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    opacity: 0;
+  }
+  .circle .icon:nth-child(8) img {
+    animation: spinInRight 3s;
+    animation-delay: 4.5s;
+    animation-fill-mode: forwards;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+      opacity: 0;
+  }
+  .circle .icon:nth-child(9) img {
+    animation: spinInLeft 3s;
+    animation-delay: 4.75s;
+    animation-fill-mode: forwards;  
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    opacity: 0;
+  }
+  .circle .icon:nth-child(10) img {
+    animation: spinInRight 3s;
+    animation-delay: 5.0s;
+    animation-fill-mode: forwards; 
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    opacity: 0;
+  }
+  .circle .icon:nth-child(11) img {
+    animation: spinInLeft 3s;
+    animation-delay: 5.25s;
+    animation-fill-mode: forwards; 
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    opacity: 0;
+  }
+  
+  .reddit:hover {
+    transition-property: -moz-filter, -ms-filter, -o-filter, -webkit-filter, filter;
+    transition-duration: 1.25s;
+    filter: invert(55%) sepia(100%) saturate(250%) hue-rotate(135deg) brightness(105%) contrast(104%);
+  }
+  .twitch:hover {
+    transition-property: -moz-filter, -ms-filter, -o-filter, -webkit-filter, filter;
+    transition-duration: 1.25s;
+    filter: invert(55%) sepia(100%) saturate(100%) hue-rotate(55deg) brightness(115%) contrast(104%);
+  }
+  .spotify:hover {
+    transition-property: -moz-filter, -ms-filter, -o-filter, -webkit-filter, filter;
+    transition-duration: 1.25s;
+    filter: invert(55%) sepia(100%) saturate(1900%) hue-rotate(-100deg) brightness(65%) contrast(104%);
+  }
+  .greasyfork:hover {
+    transition-property: -moz-filter, -ms-filter, -o-filter, -webkit-filter, filter;
+    transition-duration: 1.25s;
+    filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(105%) contrast(105%);
+  }
+  .github:hover {
+    transition-property: -moz-filter, -ms-filter, -o-filter, -webkit-filter, filter;
+    transition-duration: 1.25s;
+    filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(65%) contrast(105%);
+  }
+  .steam:hover {
+    transition-property: -moz-filter, -ms-filter, -o-filter, -webkit-filter, filter;
+    transition-duration: 1.25s;
+    filter: invert(55%) sepia(100%) saturate(250%) hue-rotate(0deg) brightness(125%) contrast(104%);
+  }
+  .onlyfans:hover {
+    transition-property: -moz-filter, -ms-filter, -o-filter, -webkit-filter, filter;
+    transition-duration: 1.25s;
+    filter: invert(55%) sepia(100%) saturate(500%) hue-rotate(-15deg) brightness(65%) contrast(104%);
+  }
+  .twitter:hover {
+    transition-property: -moz-filter, -ms-filter, -o-filter, -webkit-filter, filter;
+    transition-duration: 1.25s;
+    filter: invert(55%) sepia(100%) saturate(900%) hue-rotate(-15deg) brightness(65%) contrast(104%);
+  }
+  .youtube:hover {
+    transition-property: -moz-filter, -ms-filter, -o-filter, -webkit-filter, filter;
+    transition-duration: 1.25s;
+    filter: invert(55%) sepia(100%) saturate(300%) hue-rotate(135deg) brightness(105%) contrast(104%);
+  }
+  .glitch:hover {
+    transition-property: -moz-filter, -ms-filter, -o-filter, -webkit-filter, filter;
+    transition-duration: 1.25s;
+    filter: invert(55%) sepia(100%) saturate(800%) hue-rotate(35deg) brightness(125%) contrast(104%);
+  }
+  .discord:hover {
+    transition-property: -moz-filter, -ms-filter, -o-filter, -webkit-filter, filter;
+    transition-duration: 1.25s;
+    filter: invert(55%) sepia(100%) saturate(250%) hue-rotate(20deg) brightness(75%) contrast(104%);
+  }
+  
+  @keyframes circle1 {
+     0% {transform: rotate(32.72deg) translateX(250px) rotate(-32.72deg)}
+     100% {transform: rotate(392.72deg) translateX(250px) rotate(-392.72deg)}
+  }
+  @keyframes circle2 {
+     0% {transform: rotate(65.45deg) translateX(250px) rotate(-65.45deg)}
+     100% {transform: rotate(425.45deg) translateX(250px) rotate(-425.45deg)}
+  }
+  @keyframes circle3 {
+     0% {transform: rotate(98.18deg) translateX(250px) rotate(-98.18deg)}
+     100% {transform: rotate(458.18deg) translateX(250px) rotate(-458.18deg)}
+  }
+  @keyframes circle4 {
+     0% {transform: rotate(130.90deg) translateX(250px) rotate(-130.90deg)}
+     100% {transform: rotate(490.90deg) translateX(250px) rotate(-490.90deg)}
+  }
+  @keyframes circle5 {
+     0% {transform: rotate(163.63deg) translateX(250px) rotate(-163.63deg)}
+     100% {transform: rotate(523.63deg) translateX(250px) rotate(-523.63deg)}
+  }
+  @keyframes circle6 {
+     0% {transform: rotate(196.32deg) translateX(250px) rotate(-196.32deg)}
+     100% {transform: rotate(556.32deg) translateX(250px) rotate(-556.32deg)}
+  }
+  @keyframes circle7 {
+     0% {transform: rotate(229.04deg) translateX(250px) rotate(-229.04deg)}
+     100% {transform: rotate(589.04deg) translateX(250px) rotate(-589.04deg)}
+  }
+  @keyframes circle8 {
+     0% {transform: rotate(261.76deg) translateX(250px) rotate(-261.76deg)}
+     100% {transform: rotate(621.76deg) translateX(250px) rotate(-621.76deg)}
+  }
+  @keyframes circle9 {
+     0% {transform: rotate(294.48deg) translateX(250px) rotate(-294.48deg)}
+     100% {transform: rotate(654.48deg) translateX(250px) rotate(-654.48deg)}
+  }
+  @keyframes circle10 {
+     0% {transform: rotate(327.20deg) translateX(250px) rotate(-327.20deg)}
+     100% {transform: rotate(687.2deg) translateX(250px) rotate(-687.2deg)}
+  }
+  @keyframes circle11 {
+     0% {transform: rotate(359.92deg) translateX(250px) rotate(-359.92deg)}
+     100% {transform: rotate(719.92deg) translateX(250px) rotate(-719.92deg)}
+  }
+  
+  .circle .icon:nth-child(1) {
+    animation: circle1 45s ease-in-out infinite;
+    animation-delay: 5.5s;
+  }
+  .circle .icon:nth-child(2) {
+    animation: circle2 45s ease-in-out infinite;
+    animation-delay: 5.5s;
+  }
+  .circle .icon:nth-child(3) {
+    animation: circle3 45s ease-in-out infinite;
+    animation-delay: 5.5s;
+  }
+  .circle .icon:nth-child(4) {
+    animation: circle4 45s ease-in-out infinite;
+    animation-delay: 5.5s;
+  }
+  .circle .icon:nth-child(5) {
+    animation: circle5 45s ease-in-out infinite;
+    animation-delay: 5.5s;
+  }
+  .circle .icon:nth-child(6) {
+    animation: circle6 45s ease-in-out infinite;
+    animation-delay: 5.5s;
+  }
+  .circle .icon:nth-child(7) {
+    animation: circle7 45s ease-in-out infinite;
+    animation-delay: 5.5s;
+  }
+  .circle .icon:nth-child(8) {
+    animation: circle8 45s ease-in-out infinite;
+    animation-delay: 5.5s;
+  }
+  .circle .icon:nth-child(9) {
+    animation: circle9 45s ease-in-out infinite;
+    animation-delay: 5.5s;
+  }
+  .circle .icon:nth-child(10) {
+    animation: circle10 45s ease-in-out infinite;
+    animation-delay: 5.5s;
+  }
+  .circle .icon:nth-child(11) {
+    animation: circle11 45s ease-in-out infinite;
+    animation-delay: 5.5s;
+  }

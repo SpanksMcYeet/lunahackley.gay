@@ -35,9 +35,9 @@ body {
     background/*-image*/: linear-gradient(-45deg, #726999, #A99DE2, #688AE9, #758FD6, #78CCE2, #87C0B4); /*url('https://media.giphy.com/media/LUk0ofIlbDb68/200.gif');*/
     background-size: 300%;
     opacity: 0;
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      -webkit-animation: text 3s ease-in-out;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-animation: text 3s ease-in-out;
     -webkit-animation-fill-mode: forwards; 
     -webkit-animation-delay: 0.75s;
   }

@@ -1,9 +1,8 @@
 body {
     text-align: center;
-    background: rgb(63,94,251);
     background: radial-gradient(circle, rgb(42,71,214) 0%, rgba(252,70,107,1) 100%);
-      background-size: 400% 400%;
-      animation: gradient 30s ease-in-out infinite;
+    background-size: 400% 400%;
+    animation: gradient 30s ease-in-out infinite;
   }
   @keyframes gradient {
       0% {background-position: 0% 50%}

@@ -14,6 +14,7 @@ module.exports = {
       },
       animation: {
         'bg-gradient': 'bg-gradient 15s ease-in-out',
+        'bg-spin': 'spin 15s ease-in-out'
       }
     },
   },

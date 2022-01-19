@@ -14,9 +14,6 @@ body {
     display: block;
     position: absolute;
   }
-  .invisible {
-    opacity: 0;
-  }
   .gifbutton {
     position: relative;
     top: 0;
@@ -41,10 +38,10 @@ body {
   }
   .gif {
     position: relative;
-    top: -7;
-    left: 10;
-    height: 10%;
-    width: 10%;
+    top: 15%;
+    left: -34.25%;
+    height: 7.5%;
+    width: 7.5%;
     filter: invert(60%) hue-rotate(0deg) brightness(150%) contrast(100%)
   }
   /*.widget {

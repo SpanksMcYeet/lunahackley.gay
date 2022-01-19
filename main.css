@@ -1,4 +1,4 @@
-body {
+/*body {
     text-align: center;
     background: radial-gradient(circle, rgb(42,71,214) 0%, rgba(252,70,107,1) 100%);
     background-size: 400% 400%;
@@ -46,7 +46,7 @@ body {
   /*.widget {
     transform: translate(-140%,0%)
   }*/
-  .container {
+  /*.container {
     width: 320px;
     height: 320px;
     top: 50%;
@@ -61,7 +61,7 @@ body {
     font-size: 90px;
     font-weight: 1000;
     align-content: center;
-    background/*-image*/: linear-gradient(-45deg, #726999, #A99DE2, #688AE9, #758FD6, #78CCE2, #87C0B4); /*url('https://media.giphy.com/media/LUk0ofIlbDb68/200.gif');*/
+    background: linear-gradient(-45deg, #726999, #A99DE2, #688AE9, #758FD6, #78CCE2, #87C0B4);
     background-size: 300%;
     opacity: 0;
     -webkit-background-clip: text;
@@ -400,3 +400,4 @@ body {
     animation: circle11 45s ease-in-out infinite;
     animation-delay: 5.5s;
   }
+*/

@@ -1,3 +1,14 @@
+.popup .popText {
+  visibility: hidden;
+}
+.popup .popText::after {
+  content: "";
+}
+.popup .show {
+  visibility: visible;
+  animation: fadeIn 1s;
+  animation: fadeIn 1s
+}
 .gifbutton {
   animation: fadeIn 1s linear;
   animation-fill-mode: forwards; 
@@ -5,25 +16,25 @@
   opacity: 0;
 }
 @keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
+  0% { opacity: 0 }
+  100% { opacity: 1 }
 }
 .button {
   font-family: Whitney, "Open Sans", Helvetica, sans-serif;
   cursor: pointer;
+  background-color: #7289da;
+  border: #7289da;
 }
 .gif {
   filter: invert(60%) hue-rotate(0deg) brightness(150%) contrast(100%)
+}
+.desc {
+  transform: translate(0,30vh);
 }
 .luna {
   animation: text 3s ease-in-out;
   animation-fill-mode: forwards; 
   animation-delay: 0.75s;
-  transform: translate(0,20vh)
 }
 @keyframes text {
   0% {
@@ -43,6 +54,15 @@
   animation-delay: 2s;
   opacity: 0;
 }
+/*.micro {
+  transform: translate(0,2vh)
+}
+.code {
+  transform: translate(0,-13.5vh)
+}
+.gay {
+  transform: translate(0,-28vh)
+}*/
 @keyframes subtextL {
   /*
   f--------a  
@@ -137,7 +157,7 @@
     transform: rotateZ(0deg) scale3d(0, 0, 0);
     transform-origin: center center; 
   }
-  50% {opacity: 0.7}
+  50% { opacity: 0.7 }
   70% {
     transform: rotateZ(360deg) scale3d(1, 1, 1);
     transform-origin: center center; 
@@ -156,7 +176,7 @@
     transform: rotateZ(0deg) scale3d(0, 0, 0);
     transform-origin: center center; 
   }
-  50% {opacity: 0.7}
+  50% { opacity: 0.7 }
   70% {
     transform: rotateZ(-360deg) scale3d(1, 1, 1);
     transform-origin: center center; 
@@ -169,8 +189,7 @@
   }
 }
 .colorfix {
-  transform: translate(0,-20vh);
-  filter: invert(100%) hue-rotate(0deg) brightness(100%) contrast(100%)
+  filter: invert(100%) hue-rotate(0deg) brightness(100%) contrast(100%);
 }
 .colorfix .icon:nth-child(1) img {
   animation: spinInLeft 3s;
@@ -238,7 +257,69 @@
   animation-fill-mode: forwards; 
   opacity: 0;
 }
-
+.icon {
+  position: absolute;
+}
+.icon:nth-child(1)  { transform: rotate(36deg)  translateX(40vh) rotate(-36deg)  }
+.icon:nth-child(2)  { transform: rotate(72deg)  translateX(40vh) rotate(-72deg)  }
+.icon:nth-child(3)  { transform: rotate(108deg) translateX(40vh) rotate(-108deg) }
+.icon:nth-child(4)  { transform: rotate(144deg) translateX(40vh) rotate(-144deg) }
+.icon:nth-child(5)  { transform: rotate(180deg) translateX(40vh) rotate(-180deg) }
+.icon:nth-child(6)  { transform: rotate(216deg) translateX(40vh) rotate(-216deg) }
+.icon:nth-child(7)  { transform: rotate(252deg) translateX(40vh) rotate(-252deg) }
+.icon:nth-child(8)  { transform: rotate(288deg) translateX(40vh) rotate(-288deg) }
+.icon:nth-child(9)  { transform: rotate(324deg) translateX(40vh) rotate(-324deg) }
+.icon:nth-child(10) { transform: rotate(360deg) translateX(40vh) rotate(-360deg) }
+@keyframes spin1 {
+  0%   { transform: rotate(36deg) translateX(40vh) rotate(-36deg) }
+  100% { transform: rotate(calc(360deg + 36deg)) translateX(40vh) rotate(calc(-360deg - 36deg)) }
+}
+@keyframes spin2 {
+  0%   { transform: rotate(72deg) translateX(40vh) rotate(-72deg) }
+  100% { transform: rotate(calc(360deg + 72deg)) translateX(40vh) rotate(calc(-360deg - 72deg)) }
+}
+@keyframes spin3 {
+  0%   { transform: rotate(108deg) translateX(40vh) rotate(-108deg) }
+  100% { transform: rotate(calc(360deg + 108deg)) translateX(40vh) rotate(calc(-360deg - 108deg)) }
+}
+@keyframes spin4 {
+  0%   { transform: rotate(144deg) translateX(40vh) rotate(-144deg) }
+  100% { transform: rotate(calc(360deg + 144deg)) translateX(40vh) rotate(calc(-360deg - 144deg)) }
+}
+@keyframes spin5 {
+  0%   { transform: rotate(180deg) translateX(40vh) rotate(-180deg) }
+  100% { transform: rotate(calc(360deg + 180deg)) translateX(40vh) rotate(calc(-360deg - 180deg)) }
+}
+@keyframes spin6 {
+  0%   { transform: rotate(216deg) translateX(40vh) rotate(-216deg) }
+  100% { transform: rotate(calc(360deg + 216deg)) translateX(40vh) rotate(calc(-360deg - 216deg)) }
+}
+@keyframes spin7 {
+  0%   { transform: rotate(252deg) translateX(40vh) rotate(-252deg) }
+  100% { transform: rotate(calc(360deg + 252deg)) translateX(40vh) rotate(calc(-360deg - 252deg)) }
+}
+@keyframes spin8 {
+  0%   { transform: rotate(288deg) translateX(40vh) rotate(-288deg) }
+  100% { transform: rotate(calc(360deg + 288deg)) translateX(40vh) rotate(calc(-360deg - 288deg)) }
+}
+@keyframes spin9 {
+  0%   { transform: rotate(324deg) translateX(40vh) rotate(-324deg) }
+  100% { transform: rotate(calc(360deg + 324deg)) translateX(40vh) rotate(calc(-360deg - 324deg)) }
+}
+@keyframes spin10 {
+  0%   { transform: rotate(360deg) translateX(40vh) rotate(-360deg) }
+  100% { transform: rotate(calc(360deg + 360deg)) translateX(40vh) rotate(calc(-360deg - 360deg)) }
+}
+.icon:nth-child(1)  { animation: spin1 45s ease-in-out infinite;  animation-delay: 6.75s; animation-fill-mode: forwards }
+.icon:nth-child(2)  { animation: spin2 45s ease-in-out infinite;  animation-delay: 6.75s; animation-fill-mode: forwards }
+.icon:nth-child(3)  { animation: spin3 45s ease-in-out infinite;  animation-delay: 6.75s; animation-fill-mode: forwards }
+.icon:nth-child(4)  { animation: spin4 45s ease-in-out infinite;  animation-delay: 6.75s; animation-fill-mode: forwards }
+.icon:nth-child(5)  { animation: spin5 45s ease-in-out infinite;  animation-delay: 6.75s; animation-fill-mode: forwards }
+.icon:nth-child(6)  { animation: spin6 45s ease-in-out infinite;  animation-delay: 6.75s; animation-fill-mode: forwards }
+.icon:nth-child(7)  { animation: spin7 45s ease-in-out infinite;  animation-delay: 6.75s; animation-fill-mode: forwards }
+.icon:nth-child(8)  { animation: spin8 45s ease-in-out infinite;  animation-delay: 6.75s; animation-fill-mode: forwards }
+.icon:nth-child(9)  { animation: spin9 45s ease-in-out infinite;  animation-delay: 6.75s; animation-fill-mode: forwards }
+.icon:nth-child(10) { animation: spin10 45s ease-in-out infinite; animation-delay: 6.75s; animation-fill-mode: forwards }
 .reddit:hover {
   transition-property: -moz-filter, -ms-filter, -o-filter, -webkit-filter, filter;
   transition-duration: 1.25s;

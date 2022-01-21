@@ -422,6 +422,8 @@ let grabGif = () => {
             };
         return _0x53cdf2(), _0x10b4d1(_0x49d323[0x0], _0x49d323[0x1]);
     }, copyText = () => {
+        let popup = document.getElementById("gifPopup");
+        popup.classList.toggle("show");
         let _0x22adf9 = document['createElement']('input');
         function _0x2af8d9(_0x350b5, _0x518d72) {
             return _0x2b8c(_0x518d72 - -0x358, _0x350b5);

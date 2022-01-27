@@ -29,7 +29,7 @@
   filter: invert(60%) hue-rotate(0deg) brightness(150%) contrast(100%)
 }
 .desc {
-  transform: translate(0,30vh);
+  transform: translate(0,-2rem);
 }
 .luna {
   animation: text 3s ease-in-out;
@@ -191,124 +191,70 @@
 .colorfix {
   filter: invert(100%) hue-rotate(0deg) brightness(100%) contrast(100%);
 }
-.colorfix .icon:nth-child(1) img {
-  animation: spinInLeft 3s;
-  animation-delay: 4.0s;
-  animation-fill-mode: forwards; 
-  opacity: 0;
-}
-.colorfix .icon:nth-child(2) img {
-  animation: spinInRight 3s;
-  animation-delay: 4.25s;
-  animation-fill-mode: forwards; 
-  opacity: 0;
-}
-.colorfix .icon:nth-child(3) img {
-  animation: spinInLeft 3s;
-  animation-delay: 4.5s;
-  animation-fill-mode: forwards; 
-  opacity: 0;
-}
-.colorfix .icon:nth-child(4) img {
-  animation: spinInRight 3s;
-  animation-delay: 4.75s;
-  animation-fill-mode: forwards; 
-  opacity: 0;
-}
-.colorfix .icon:nth-child(5) img {
-  animation: spinInLeft 3s;
-  animation-delay: 5.0s;
-  animation-fill-mode: forwards; 
-  opacity: 0;
-}
-.colorfix .icon:nth-child(6) img {
-  animation: spinInRight 3s;
-  animation-delay: 5.25s;
-  animation-fill-mode: forwards; 
-  opacity: 0;
-}
-.colorfix .icon:nth-child(7) img {
-  animation: spinInLeft 3s;
-  animation-delay: 5.5s;
-  animation-fill-mode: forwards; 
-  opacity: 0;
-}
-.colorfix .icon:nth-child(8) img {
-  animation: spinInRight 3s;
-  animation-delay: 5.75s;
-  animation-fill-mode: forwards;
-    opacity: 0;
-}
-.colorfix .icon:nth-child(9) img {
-  animation: spinInLeft 3s;
-  animation-delay: 6.0s;
-  animation-fill-mode: forwards;  
-  opacity: 0;
-}
-.colorfix .icon:nth-child(10) img {
-  animation: spinInRight 3s;
-  animation-delay: 6.25s;
-  animation-fill-mode: forwards; 
-  opacity: 0;
-}
-.colorfix .icon:nth-child(11) img {
-  animation: spinInLeft 3s;
-  animation-delay: 6.5s;
-  animation-fill-mode: forwards; 
-  opacity: 0;
-}
 .icon {
   position: absolute;
 }
-.icon:nth-child(1)  { transform: rotate(36deg)  translateX(40vh) rotate(-36deg)  }
-.icon:nth-child(2)  { transform: rotate(72deg)  translateX(40vh) rotate(-72deg)  }
-.icon:nth-child(3)  { transform: rotate(108deg) translateX(40vh) rotate(-108deg) }
-.icon:nth-child(4)  { transform: rotate(144deg) translateX(40vh) rotate(-144deg) }
-.icon:nth-child(5)  { transform: rotate(180deg) translateX(40vh) rotate(-180deg) }
-.icon:nth-child(6)  { transform: rotate(216deg) translateX(40vh) rotate(-216deg) }
-.icon:nth-child(7)  { transform: rotate(252deg) translateX(40vh) rotate(-252deg) }
-.icon:nth-child(8)  { transform: rotate(288deg) translateX(40vh) rotate(-288deg) }
-.icon:nth-child(9)  { transform: rotate(324deg) translateX(40vh) rotate(-324deg) }
-.icon:nth-child(10) { transform: rotate(360deg) translateX(40vh) rotate(-360deg) }
+.icon:nth-child(odd) img { opacity: 0; animation: spinInLeft 3s; animation-fill-mode: forwards }
+.icon:nth-child(even) img { opacity: 0; animation: spinInRight 3s; animation-fill-mode: forwards }
+.icon:nth-child(1)  img { animation-delay: 4.0s  }
+.icon:nth-child(2)  img { animation-delay: 4.25s }
+.icon:nth-child(3)  img { animation-delay: 4.5s  }
+.icon:nth-child(4)  img { animation-delay: 4.75s }
+.icon:nth-child(5)  img { animation-delay: 5.0s  }
+.icon:nth-child(6)  img { animation-delay: 5.25s }
+.icon:nth-child(7)  img { animation-delay: 5.5s  }
+.icon:nth-child(8)  img { animation-delay: 5.75s }
+.icon:nth-child(9)  img { animation-delay: 6.0s  }
+.icon:nth-child(10) img { animation-delay: 6.25s }
+.icon:nth-child(1)  { transform: rotate(36deg)  translateX(15rem) rotate(-36deg)  }
+.icon:nth-child(2)  { transform: rotate(72deg)  translateX(15rem) rotate(-72deg)  }
+.icon:nth-child(3)  { transform: rotate(108deg) translateX(15rem) rotate(-108deg) }
+.icon:nth-child(4)  { transform: rotate(144deg) translateX(15rem) rotate(-144deg) }
+.icon:nth-child(5)  { transform: rotate(180deg) translateX(15rem) rotate(-180deg) }
+.icon:nth-child(6)  { transform: rotate(216deg) translateX(15rem) rotate(-216deg) }
+.icon:nth-child(7)  { transform: rotate(252deg) translateX(15rem) rotate(-252deg) }
+.icon:nth-child(8)  { transform: rotate(288deg) translateX(15rem) rotate(-288deg) }
+.icon:nth-child(9)  { transform: rotate(324deg) translateX(15rem) rotate(-324deg) }
+.icon:nth-child(10) { transform: rotate(360deg) translateX(15rem) rotate(-360deg) }
 @keyframes spin1 {
-  0%   { transform: rotate(36deg) translateX(40vh) rotate(-36deg) }
-  100% { transform: rotate(calc(360deg + 36deg)) translateX(40vh) rotate(calc(-360deg - 36deg)) }
+  0%   { transform: rotate(36deg) translateX(15rem) rotate(-36deg) }
+  100% { transform: rotate(calc(360deg + 36deg)) translateX(15rem) rotate(calc(-360deg - 36deg)) }
 }
 @keyframes spin2 {
-  0%   { transform: rotate(72deg) translateX(40vh) rotate(-72deg) }
-  100% { transform: rotate(calc(360deg + 72deg)) translateX(40vh) rotate(calc(-360deg - 72deg)) }
+  0%   { transform: rotate(72deg) translateX(15rem) rotate(-72deg) }
+  100% { transform: rotate(calc(360deg + 72deg)) translateX(15rem) rotate(calc(-360deg - 72deg)) }
 }
 @keyframes spin3 {
-  0%   { transform: rotate(108deg) translateX(40vh) rotate(-108deg) }
-  100% { transform: rotate(calc(360deg + 108deg)) translateX(40vh) rotate(calc(-360deg - 108deg)) }
+  0%   { transform: rotate(108deg) translateX(15rem) rotate(-108deg) }
+  100% { transform: rotate(calc(360deg + 108deg)) translateX(15rem) rotate(calc(-360deg - 108deg)) }
 }
 @keyframes spin4 {
-  0%   { transform: rotate(144deg) translateX(40vh) rotate(-144deg) }
-  100% { transform: rotate(calc(360deg + 144deg)) translateX(40vh) rotate(calc(-360deg - 144deg)) }
+  0%   { transform: rotate(144deg) translateX(15rem) rotate(-144deg) }
+  100% { transform: rotate(calc(360deg + 144deg)) translateX(15rem) rotate(calc(-360deg - 144deg)) }
 }
 @keyframes spin5 {
-  0%   { transform: rotate(180deg) translateX(40vh) rotate(-180deg) }
-  100% { transform: rotate(calc(360deg + 180deg)) translateX(40vh) rotate(calc(-360deg - 180deg)) }
+  0%   { transform: rotate(180deg) translateX(15rem) rotate(-180deg) }
+  100% { transform: rotate(calc(360deg + 180deg)) translateX(15rem) rotate(calc(-360deg - 180deg)) }
 }
 @keyframes spin6 {
-  0%   { transform: rotate(216deg) translateX(40vh) rotate(-216deg) }
-  100% { transform: rotate(calc(360deg + 216deg)) translateX(40vh) rotate(calc(-360deg - 216deg)) }
+  0%   { transform: rotate(216deg) translateX(15rem) rotate(-216deg) }
+  100% { transform: rotate(calc(360deg + 216deg)) translateX(15rem) rotate(calc(-360deg - 216deg)) }
 }
 @keyframes spin7 {
-  0%   { transform: rotate(252deg) translateX(40vh) rotate(-252deg) }
-  100% { transform: rotate(calc(360deg + 252deg)) translateX(40vh) rotate(calc(-360deg - 252deg)) }
+  0%   { transform: rotate(252deg) translateX(15rem) rotate(-252deg) }
+  100% { transform: rotate(calc(360deg + 252deg)) translateX(15rem) rotate(calc(-360deg - 252deg)) }
 }
 @keyframes spin8 {
-  0%   { transform: rotate(288deg) translateX(40vh) rotate(-288deg) }
-  100% { transform: rotate(calc(360deg + 288deg)) translateX(40vh) rotate(calc(-360deg - 288deg)) }
+  0%   { transform: rotate(288deg) translateX(15rem) rotate(-288deg) }
+  100% { transform: rotate(calc(360deg + 288deg)) translateX(15rem) rotate(calc(-360deg - 288deg)) }
 }
 @keyframes spin9 {
-  0%   { transform: rotate(324deg) translateX(40vh) rotate(-324deg) }
-  100% { transform: rotate(calc(360deg + 324deg)) translateX(40vh) rotate(calc(-360deg - 324deg)) }
+  0%   { transform: rotate(324deg) translateX(15rem) rotate(-324deg) }
+  100% { transform: rotate(calc(360deg + 324deg)) translateX(15rem) rotate(calc(-360deg - 324deg)) }
 }
 @keyframes spin10 {
-  0%   { transform: rotate(360deg) translateX(40vh) rotate(-360deg) }
-  100% { transform: rotate(calc(360deg + 360deg)) translateX(40vh) rotate(calc(-360deg - 360deg)) }
+  0%   { transform: rotate(360deg) translateX(15rem) rotate(-360deg) }
+  100% { transform: rotate(calc(360deg + 360deg)) translateX(15rem) rotate(calc(-360deg - 360deg)) }
 }
 .icon:nth-child(1)  { animation: spin1 45s ease-in-out infinite;  animation-delay: 6.75s; animation-fill-mode: forwards }
 .icon:nth-child(2)  { animation: spin2 45s ease-in-out infinite;  animation-delay: 6.75s; animation-fill-mode: forwards }
@@ -321,57 +267,57 @@
 .icon:nth-child(9)  { animation: spin9 45s ease-in-out infinite;  animation-delay: 6.75s; animation-fill-mode: forwards }
 .icon:nth-child(10) { animation: spin10 45s ease-in-out infinite; animation-delay: 6.75s; animation-fill-mode: forwards }
 .reddit:hover {
-  transition-property: -moz-filter, -ms-filter, -o-filter, -webkit-filter, filter;
+  transition-property: filter;
   transition-duration: 1.25s;
   filter: invert(55%) sepia(100%) saturate(250%) hue-rotate(135deg) brightness(105%) contrast(104%);
 }
 .twitch:hover {
-  transition-property: -moz-filter, -ms-filter, -o-filter, -webkit-filter, filter;
+  transition-property: filter;
   transition-duration: 1.25s;
   filter: invert(55%) sepia(100%) saturate(100%) hue-rotate(55deg) brightness(115%) contrast(104%);
 }
 .spotify:hover {
-  transition-property: -moz-filter, -ms-filter, -o-filter, -webkit-filter, filter;
+  transition-property: filter;
   transition-duration: 1.25s;
   filter: invert(55%) sepia(100%) saturate(1900%) hue-rotate(-100deg) brightness(65%) contrast(104%);
 }
 .greasyfork:hover {
-  transition-property: -moz-filter, -ms-filter, -o-filter, -webkit-filter, filter;
+  transition-property: filter;
   transition-duration: 1.25s;
   filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(105%) contrast(105%);
 }
 .github:hover {
-  transition-property: -moz-filter, -ms-filter, -o-filter, -webkit-filter, filter;
+  transition-property: filter;
   transition-duration: 1.25s;
   filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(65%) contrast(105%);
 }
 .steam:hover {
-  transition-property: -moz-filter, -ms-filter, -o-filter, -webkit-filter, filter;
+  transition-property: filter;
   transition-duration: 1.25s;
   filter: invert(55%) sepia(100%) saturate(250%) hue-rotate(0deg) brightness(125%) contrast(104%);
 }
 .onlyfans:hover {
-  transition-property: -moz-filter, -ms-filter, -o-filter, -webkit-filter, filter;
+  transition-property: filter;
   transition-duration: 1.25s;
   filter: invert(55%) sepia(100%) saturate(500%) hue-rotate(-15deg) brightness(65%) contrast(104%);
 }
 .twitter:hover {
-  transition-property: -moz-filter, -ms-filter, -o-filter, -webkit-filter, filter;
+  transition-property: filter;
   transition-duration: 1.25s;
   filter: invert(55%) sepia(100%) saturate(900%) hue-rotate(-15deg) brightness(65%) contrast(104%);
 }
 .youtube:hover {
-  transition-property: -moz-filter, -ms-filter, -o-filter, -webkit-filter, filter;
+  transition-property: filter;
   transition-duration: 1.25s;
   filter: invert(55%) sepia(100%) saturate(300%) hue-rotate(135deg) brightness(105%) contrast(104%);
 }
 .glitch:hover {
-  transition-property: -moz-filter, -ms-filter, -o-filter, -webkit-filter, filter;
+  transition-property: filter;
   transition-duration: 1.25s;
   filter: invert(55%) sepia(100%) saturate(800%) hue-rotate(35deg) brightness(125%) contrast(104%);
 }
 .discord:hover {
-  transition-property: -moz-filter, -ms-filter, -o-filter, -webkit-filter, filter;
+  transition-property: filter;
   transition-duration: 1.25s;
   filter: invert(55%) sepia(100%) saturate(250%) hue-rotate(20deg) brightness(75%) contrast(104%);
 }

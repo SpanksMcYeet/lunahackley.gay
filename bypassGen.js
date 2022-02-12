@@ -1,3 +1,4 @@
+
 let n = ''
 let nA = {
     n: ['🅽', 'Ⓝ', 'ⓝ', '𐌽', 'Ṇ', 'η', 'Ｎ', 'ｎ', 'ᑎ', 'Ň', 'ภ', 'η', 'ή', 'Ň', 'Ɲ', '𝔫', '𝓷', '𝓃', '𝓝', '𝐍', '𝐧', 'ℕ', '𝕟', 'ᶰ', 'n', 'ո', 'ռ', 'ｎ', '𝐧', '𝑛', '𝒏', '𝓃', '𝓷', '𝔫', '𝕟', '𝖓', '𝗇', '𝗻', '𝘯', '𝙣', '𝚗', 'N', 'ɴ', 'Ν', 'ℕ', 'Ⲛ', 'ꓠ', 'Ｎ'],
@@ -49,4 +50,38 @@ document.getElementById("bypassBGen").addEventListener("click", bWGen = () => {
         }
     }
     document.getElementById("showBBypass").innerHTML = b
+})
+document.getElementById("beanerButton").addEventListener("click", g = () => {
+    let r = (m, d) => d ? Math.floor(Math.random() * m) : Math.random() < m
+    let p = a => a[Math.floor(Math.random() * a.length)]
+    let u = (w, c) => r(c) ? w.toUpperCase() : w
+    let s = (x, c, i, h, t) => i.match(x) && r(c) ? i += h : i += t
+    let b = {
+        c: ['}', '{', '+', '`', '/', '\'', 'ç'],
+        w: ['hola', 'equipo', 'gato', 'pero', 'viva', 'pro', 'dejas', 'paja', 'puto', 'es mal', 'gordo', 'morir', 'madre', 'gg', 'xX', 'spain', 'portugal', '[GD]'],
+        f: [':v', ':V', '>:V', '>:v', ':c', ':C'],
+        s: ['el crak', 'elcrak', 'elcrack', 'el crack', 'puta madre', 'muy gordo', 'soy tu mal', 'equipo pro', 'tengo pro', 'es amigo?', 'jajaja', 'xd', 'xxx', '    ', 'caca!!', 'gg', 'depressões'],
+        n: ['ronaldo', 'ssundee', 'alfonso', 'alfredo', 'aberto', 'balzac', 'hugo', 'lola', 'mateo', 'marco', 'joaquin', 'leonardo', 'rafael', 'lorenzo', 'diego', 'antonio', 'cruz', 'francisco', 'carlos', 'matias', 'miguel', 'mario', 'pablo', 'carlo', 'rico', 'diablo', 'jose', 'carmen', 'nacho', 'paco', 'manuel', 'juan', 'matheo', 'sergio', 'eduardo', 'pedro', 'ricardo', 'gustavo', 'esteban', 'rodrigo', 'leon', 'felipe', 'jorge', 'felice', 'ernesto']
+    }
+    let o = ''
+    let v = (l) => {
+        let c = ''
+        for (let i = 0; i < l; i++)
+            c = s(/[}{+]$/g, 0.6, c, '+', p(b.c))
+        return c
+    }
+    let c = [
+      0.1, 0.3, 0.8, 0.4, 0.2, 0.75,
+      v(2),
+      u(p(b.w), 0.4),
+      u(p(b.n), 0.4),
+      u(p(b.s), 0.4),
+      p(b.f),
+      v(7)
+    ]
+    for (let i of c) {
+      o += r(i) ? ` ${c[c.indexOf(i)+6]}` : ''
+    }
+    o.slice(o.length - (o.length - 1))
+    document.getElementById("showBean").innerHTML = o   
 })

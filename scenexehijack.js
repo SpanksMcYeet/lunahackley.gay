@@ -559,7 +559,7 @@
 		TEAM_COLORS: ["#00b0e1", "#f04f54", "#00e06c", "#be7ff5"],
 		FALLEN_COLOR: "#c0c0c0",
 		CELESTIAL_COLOR: "#f177dd",
-		BARREL_COLOR: "#999999",
+		BARREL_COLOR: "#ffffff",
 		BACKGROUND_UI_COLOR: "#545454",
 		SPIKE_COLOR: "#5F676C",
 		STROKE_SIZE: 5,
@@ -1597,7 +1597,7 @@
 	})), _shared_editorconstants__WEBPACK_IMPORTED_MODULE_2__.VISUAL_TEAMS.forEach((function(e) {
 		var t = addChild(visualTeamSelect, "option");
 		t.value = e.value, t.innerText = e.name
-	})), weaponCameraSizeMultiplierInput.onchange = function() {
+	})), weaponCameraSizeMultiplierInput.onchange = function() {	// FOV?
 		currentWeapon.cameraSizeMultiplier = validateNumberAttribute(simplifyNumberInput(weaponCameraSizeMultiplierInput.value), 1), weaponCameraSizeMultiplierInput.value = Math.max(.1, currentWeapon.cameraSizeMultiplier), Object(_networking__WEBPACK_IMPORTED_MODULE_6__.updateWeapon)(), weaponUpdate()
 	}, bodyCameraSizeMultiplierInput.onchange = function() {
 		currentBody.cameraSizeMultiplier = validateNumberAttribute(simplifyNumberInput(bodyCameraSizeMultiplierInput.value), 1), bodyCameraSizeMultiplierInput.value = Math.max(.1, currentBody.cameraSizeMultiplier), Object(_networking__WEBPACK_IMPORTED_MODULE_6__.updateBody)(), bodyUpdate()

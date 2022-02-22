@@ -268,7 +268,7 @@
 		</div>
 		<div id="main-menu" class="hidden">
 			<div id="title">scenexe.io</div>
-			<div id="subtitle" class="hide">Kang Client</div>
+			<div id="subtitle">Kang Client</div>
 
 
 <!-- 		POLYGON_COLORS: ["#00EAD3", "#FFF5B7", "#F8485E", "#FF449F", "#005F99", "#512D6D", "#00C1D4", "#2EB086", "#313552", "#EEE6CE", "#EEEEEE", "#000000"],
@@ -279,41 +279,44 @@
 		BACKGROUND_UI_COLOR: "#081e20",
 		SPIKE_COLOR: "#5F676C",
 -->
-              <div id="mySidenav" class="sidenav">
-                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+              <div id="themeBar" class="themebar">
+                <a href="javascript:void(0)" id="closeBar" class="closebtn">&times;</a>
                 <a id="buttons">
-                    <button id="button-save" onclick="saveTheme()">Save Theme</button>
+                    <button id="button-save">Save Theme</button>
                 </a>
+				<a id="buttons">
+                    <button id="button-import" onclick="alert(themeObj.blue)
+					">Import Theme</button>
+                </a>
+				<div id="themeInput">
+                	<a>Blue Team<input      value="#2c3eb9"/></a>
+                	<a>Red Team<input       value="#b91234"/></a>
+                	<a>Green Team<input     value="#efb209"/></a>
+                	<a>Purple Team<input    value="#8b124c"/></a>
 
-                <a>Blue Team<input      value="#2c3eb9" id="themeInput"/></a>
-                <a>Red Team<input       value="#b91234" id="themeInput"/></a>
-                <a>Green Team<input     value="#efb209" id="themeInput"/></a>
-                <a>Purple Team<input    value="#8b124c" id="themeInput"/></a>
+                	<a>Fallen<input         value="#c0c0c0"/></a>
+                	<a>Celestial<input      value="#76b68b"/></a>
+                	<a>Barrel<input         value="#839496"/></a>
+                	<a>Spike<input          value="#5F676C"/></a>
 
-                <a>Fallen<input         value="#c0c0c0" id="themeInput"/></a>
-                <a>Celestial<input      value="#76b68b" id="themeInput"/></a>
-                <a>Barrel<input         value="#839496" id="themeInput"/></a>
-                <a>Spike<input          value="#5F676C" id="themeInput"/></a>
-
-                <a>Triangles<input      value="#00EAD3" id="themeInput"/></a>
-                <a>Squares<input        value="#FFF5B7" id="themeInput"/></a>
-                <a>Pentagons<input      value="#F8485E" id="themeInput"/></a>
-                <a>Hexagons<input       value="#FF449F" id="themeInput"/></a>
-                <a>Heptagon<input       value="#005F99" id="themeInput"/></a>
-                <a>Octagon<input        value="#512D6D" id="themeInput"/></a>
-                <a>Nonagon<input        value="#00C1D4" id="themeInput"/></a>
-                <a>Dodecagon<input      value="#2EB086" id="themeInput"/></a>
-                <a>Hendecagon<input     value="#313552" id="themeInput"/></a>
-                <a>Dodecagon<input      value="#EEE6CE" id="themeInput"/></a>
-                <a>Triskaidecagon<input value="#EEEEEE" id="themeInput"/></a>
-                <a>Dodecagon<input      value="#000000" id="themeInput"/></a>         
+                	<a>Triangles<input      value="#00EAD3"/></a>
+                	<a>Squares<input        value="#FFF5B7"/></a>
+                	<a>Pentagons<input      value="#F8485E"/></a>
+                	<a>Hexagons<input       value="#FF449F"/></a>
+                	<a>Heptagon<input       value="#005F99"/></a>
+                	<a>Octagon<input        value="#512D6D"/></a>
+                	<a>Nonagon<input        value="#00C1D4"/></a>
+                	<a>Dodecagon<input      value="#2EB086"/></a>
+                	<a>Hendecagon<input     value="#313552"/></a>
+                	<a>Dodecagon<input      value="#EEE6CE"/></a>
+                	<a>Triskaidecagon<input value="#EEEEEE"/></a>
+                	<a>Dodecagon<input      value="#000000"/></a>   
+				</div>      
               </div>
-              
               <!-- Use any element to open the sidenav -->
               <div id="buttons">
-				<button id="button-theme" onclick="openNav()">Open Theme Editor</button>
+				<button id="button-theme">Open Theme Editor</button>
                 </div>
-
 			<div id="changelog" class="hide">
 				<p>you can view the full changelog <a id="full-changelog-link" href="#">here</a></p>
 			</div>

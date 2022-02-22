@@ -669,7 +669,7 @@ button:focus{
 }
 #changelog,#debug-mode{
 	position:absolute;
-	top:1vmin;
+	top:100px;
 	left:1vmin;
 	width:40vmax;
 	height:50vmin;

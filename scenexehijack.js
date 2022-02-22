@@ -4176,8 +4176,8 @@
 			dimension: {
 				visual: {
 					gridSize: 30,
-					backgroundColor: "#CDCDCD",
-					gridColor: "#C8C8C8",
+					backgroundColor: "#081e20",
+					gridColor: "#000000",
 					particles: {
 						spawnrate: 0 / (c.CAMERA_SIZE * c.CAMERA_SIZE),
 						speed: {
@@ -4205,8 +4205,8 @@
 							max: 1
 						},
 						color: {
-							min: "#CDCDCD",
-							max: "#C8C8C8"
+							min: "#081e20",
+							max: "#000000"
 						}
 					}
 				},
@@ -10964,8 +10964,8 @@
 						max: 1
 					},
 					color: {
-						min: "#CDCDCD",
-						max: "#C8C8C8"
+						min: "#081e20",
+						max: "#000000"
 					}
 				}
 			},

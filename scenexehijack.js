@@ -7,7 +7,7 @@ let closeNav = () => {
     document.getElementById("main").style.marginLeft = "0"
   }
 
-let getColors = id => {
+/*let getColors = id => {
     let colors = []
     for (let i = 0; i < 20; i++)
         if (document.querySelector(`#themeInput :nth-child(${i})`).innerHTML === '') {
@@ -43,7 +43,7 @@ let saveTheme = () => {
     }
     theme.push(storedTheme)
     localStorage.setItem('theme', JSON.stringify(storedTheme))
-}
+}*/
 ! function(e) {
 	var t = {};
 

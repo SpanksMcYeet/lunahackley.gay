@@ -521,16 +521,16 @@
 		CAMERA_SHAKE_DIST: 1e5,
 		SERVER_TPS: 30,
 		MAX_PARTICLES: 1e3,
-		MAX_LEADERBOARD_ENTRIES: 8,
-		CAMERA_SIZE: 2e3,
+		MAX_LEADERBOARD_ENTRIES: 15,
+		CAMERA_SIZE: 5e3,
 		CHAT_STAY_TIME: 12,
 		NOTIF_STAY_TIME: 6,
 		MSG_FADE_IN_TIME: .2,
 		MSG_FADE_OUT_TIME: .5,
-		AUTO_SPIN_SPEED: 1.2,
-		GRID_STROKE: 5,
+		AUTO_SPIN_SPEED: 0.5,
+		GRID_STROKE: 3,
 		POLYGON_COLORS: ["#00EAD3", "#FFF5B7", "#F8485E", "#FF449F", "#005F99", "#512D6D", "#00C1D4", "#2EB086", "#313552", "#EEE6CE", "#EEEEEE", "#000000"],
-		NUMBER_ENDINGS: ["k", "m", "b", "t", "qa", "qi", "sx", "sp", "oc", "no", "dc", "ud", "dd", "td", "qad", "qid", "sxd", "spd", "ocd", "nod", "vg", "uvg", "dvg", "tvg", "qavg", "qivg", "sxvg", "spvg", "ocvg", "novg", "tg", "utg", "dtg", "ttg", "qatg", "qitg", "sxtg", "sptg", "octg", "notg", "qd", "uqd", "dqd", "tqd", "qaqd", "qiqd", "sxqd", "spqd", "ocqd", "noqd", "qq", "uqq", "dqq", "tqq", "qaqq", "qiqq", "sxqq", "spqq", "ocqq", "noqq", "sg", "usg", "dsg", "tsg", "qasg", "qisg", "sxsg", "spsg", "ocsg", "nosg", "st", "ust", "dst", "tst", "qast", "qist", "sxst", "spst", "ocst", "nost", "og", "uog", "dog", "tog", "qaog", "qiog", "sxog", "spog", "ocog", "noog", "nm", "unm", "dnm", "tnm", "qanm", "qinm", "sxnm", "spnm", "ocnm", "nonm", "ct", "udct"],
+		NUMBER_ENDINGS: ["k", "mil", "bil", "tril", "qa", "qi", "sx", "sp", "oc", "no", "dc", "ud", "dd", "td", "qad", "qid", "sxd", "spd", "ocd", "nod", "vg", "uvg", "dvg", "tvg", "qavg", "qivg", "sxvg", "spvg", "ocvg", "novg", "tg", "utg", "dtg", "ttg", "qatg", "qitg", "sxtg", "sptg", "octg", "notg", "qd", "uqd", "dqd", "tqd", "qaqd", "qiqd", "sxqd", "spqd", "ocqd", "noqd", "qq", "uqq", "dqq", "tqq", "qaqq", "qiqq", "sxqq", "spqq", "ocqq", "noqq", "sg", "usg", "dsg", "tsg", "qasg", "qisg", "sxsg", "spsg", "ocsg", "nosg", "st", "ust", "dst", "tst", "qast", "qist", "sxst", "spst", "ocst", "nost", "og", "uog", "dog", "tog", "qaog", "qiog", "sxog", "spog", "ocog", "noog", "nm", "unm", "dnm", "tnm", "qanm", "qinm", "sxnm", "spnm", "ocnm", "nonm", "ct", "udct"],
 		TEAM_NAMES: {
 			"-1": "Fallen",
 			0: "Lone",
@@ -560,7 +560,7 @@
 		FALLEN_COLOR: "#c0c0c0",
 		CELESTIAL_COLOR: "#76b68b",
 		BARREL_COLOR: "#839496",
-		BACKGROUND_UI_COLOR: "#545454",
+		BACKGROUND_UI_COLOR: "#081e20",
 		SPIKE_COLOR: "#5F676C",
 		STROKE_SIZE: 5,
 		STROKE_SHADE: -30,
@@ -662,8 +662,8 @@
 		UPGRADE_COUNT: 4,
 		MAX_UPGRADE_POINTS: 15,
 		UPGRADE_COLORS: ["#768cfc", "#fc7676", "#38b764", "#ffe46b"],
-		BODY_UPGRADE_NAMES: ["Max Health", "Health Regeneration", "Body Damage", "Movement Speed"],
-		WEAPON_UPGRADE_NAMES: ["Reload", "Bullet Damage", "Bullet Speed", "Bullet Penetration"]
+		BODY_UPGRADE_NAMES: ["Beefiness", "Chug Jug", "Thorns III", "SPEEEEEED"],
+		WEAPON_UPGRADE_NAMES: ["Pew Pew", "Owness", "Bullet Speed", "Penetration UwU"]
 	})
 }, function(e, t, n) {
 	"use strict";
@@ -6500,7 +6500,7 @@
 
 	function oe() {
 		Object(r.disconnectFromServer)(!1), document.getElementById("disconnect-modal").classList.remove("hide"), document.getElementById("reconnect-button").onclick = function() {
-			//window.location.reload()
+			window.location.reload()
 		}
 	}
 

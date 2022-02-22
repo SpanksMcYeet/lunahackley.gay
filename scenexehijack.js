@@ -455,7 +455,7 @@
 		var t = Object(u.arrayToSentence)(["You"].concat(e.helpers.map((function(e) {
 			return i.f.showNames ? "" != e.name ? e.name : "an unnamed ".concat(e.className) : "a".concat(Object(r.startsWithVowel)(e.className) ? "n" : "", " ").concat(e.className)
 		}))));
-		t += " killed ", t += i.f.showNames ? "" != e.name ? e.name : "an unnamed ".concat(e.className) : "a".concat(Object(r.startsWithVowel)(e.className) ? "n" : "", " ").concat(e.className), P(t += ".")
+		t += " murdered ", t += i.f.showNames ? "" != e.name ? e.name : "an unnamed ".concat(e.className) : "a".concat(Object(r.startsWithVowel)(e.className) ? "n" : "", " ").concat(e.className), P(t += ".")
 	}
 	var B = [2 * a.UPGRADE_COUNT],
 		D = 0,
@@ -522,7 +522,7 @@
 		SERVER_TPS: 30,
 		MAX_PARTICLES: 1e3,
 		MAX_LEADERBOARD_ENTRIES: 15,
-		CAMERA_SIZE: 5e3,
+		CAMERA_SIZE: 4e3,
 		CHAT_STAY_TIME: 12,
 		NOTIF_STAY_TIME: 6,
 		MSG_FADE_IN_TIME: .2,
@@ -6500,7 +6500,7 @@
 
 	function oe() {
 		Object(r.disconnectFromServer)(!1), document.getElementById("disconnect-modal").classList.remove("hide"), document.getElementById("reconnect-button").onclick = function() {
-			window.location.reload()
+			//window.location.reload()
 		}
 	}
 

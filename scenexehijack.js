@@ -10935,8 +10935,8 @@
 			visual: {
 				gridSize: 30,
 				showMinimap: !0,
-				backgroundColor: "#CDCDCD",
-				gridColor: "#C8C8C8",
+				backgroundColor: "#081e20",
+				gridColor: "#000000",
 				particles: {
 					spawnrate: 0,
 					speed: {

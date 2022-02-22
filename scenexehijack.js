@@ -1,49 +1,11 @@
-let openNav = () => {
-    document.getElementById("mySidenav").style.width = "250px"
-    document.getElementById("main").style.marginLeft = "250px"
+function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+    document.getElementById("main").style.marginLeft = "250px";
   }
-let closeNav = () => {
-    document.getElementById("mySidenav").style.width = "0"
-    document.getElementById("main").style.marginLeft = "0"
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+    document.getElementById("main").style.marginLeft = "0";
   }
-
-/*let getColors = id => {
-    let colors = []
-    for (let i = 0; i < 20; i++)
-        if (document.querySelector(`#themeInput :nth-child(${i})`).innerHTML === '') {
-            colors.push("#ffffff")
-        } else {
-            colors.push(document.querySelector(`#themeInput :nth-child(${i})`).innerHTML)
-        }
-    return colors[id]
-}
-let saveTheme = () => {
-    let theme = JSON.parse(localStorage.getItem('theme')) || []
-    let storedTheme = {
-        a: document.querySelector('#themeInput :nth-child(1)').innerHTML,
-        b: document.querySelector('#themeInput :nth-child(2)').innerHTML,
-        c: document.querySelector('#themeInput :nth-child(3)').innerHTML,
-        d: document.querySelector('#themeInput :nth-child(4)').innerHTML,
-        e: document.querySelector('#themeInput :nth-child(5)').innerHTML,
-        f: document.querySelector('#themeInput :nth-child(6)').innerHTML,
-        g: document.querySelector('#themeInput :nth-child(7)').innerHTML,
-        h: document.querySelector('#themeInput :nth-child(8)').innerHTML,
-        i: document.querySelector('#themeInput :nth-child(9)').innerHTML,
-        j: document.querySelector('#themeInput :nth-child(10)').innerHTML,
-        k: document.querySelector('#themeInput :nth-child(11)').innerHTML,
-        l: document.querySelector('#themeInput :nth-child(12)').innerHTML,
-        m: document.querySelector('#themeInput :nth-child(13)').innerHTML,
-        n: document.querySelector('#themeInput :nth-child(14)').innerHTML,
-        o: document.querySelector('#themeInput :nth-child(15)').innerHTML,
-        p: document.querySelector('#themeInput :nth-child(16)').innerHTML,
-        q: document.querySelector('#themeInput :nth-child(17)').innerHTML,
-        r: document.querySelector('#themeInput :nth-child(18)').innerHTML,
-        s: document.querySelector('#themeInput :nth-child(19)').innerHTML,
-        t: document.querySelector('#themeInput :nth-child(20)').innerHTML
-    }
-    theme.push(storedTheme)
-    localStorage.setItem('theme', JSON.stringify(storedTheme))
-}*/
 ! function(e) {
 	var t = {};
 
@@ -575,7 +537,7 @@ let saveTheme = () => {
 		MSG_FADE_OUT_TIME: .5,
 		AUTO_SPIN_SPEED: 0.5,
 		GRID_STROKE: 3,
-		POLYGON_COLORS: ["#00EAD3", "#FFF5B7", "#F8485E", "#FF449F", "#005F99", "#512D6D", "#00C1D4", "#2EB086", "#313552", "#EEE6CE", "#EEEEEE", "#000000"],//[getColors(8), getColors(9), getColors(10), getColors(11), getColors(12), getColors(13), getColors(14), getColors(15), getColors(16), getColors(17), getColors(18), getColors(19), getColors(20), getColors(21)],
+		POLYGON_COLORS: ["#00EAD3", "#FFF5B7", "#F8485E", "#FF449F", "#005F99", "#512D6D", "#00C1D4", "#2EB086", "#313552", "#EEE6CE", "#EEEEEE", "#000000"],
 		NUMBER_ENDINGS: ["k", "mil", "bil", "tril", "qa", "qi", "sx", "sp", "oc", "no", "dc", "ud", "dd", "td", "qad", "qid", "sxd", "spd", "ocd", "nod", "vg", "uvg", "dvg", "tvg", "qavg", "qivg", "sxvg", "spvg", "ocvg", "novg", "tg", "utg", "dtg", "ttg", "qatg", "qitg", "sxtg", "sptg", "octg", "notg", "qd", "uqd", "dqd", "tqd", "qaqd", "qiqd", "sxqd", "spqd", "ocqd", "noqd", "qq", "uqq", "dqq", "tqq", "qaqq", "qiqq", "sxqq", "spqq", "ocqq", "noqq", "sg", "usg", "dsg", "tsg", "qasg", "qisg", "sxsg", "spsg", "ocsg", "nosg", "st", "ust", "dst", "tst", "qast", "qist", "sxst", "spst", "ocst", "nost", "og", "uog", "dog", "tog", "qaog", "qiog", "sxog", "spog", "ocog", "noog", "nm", "unm", "dnm", "tnm", "qanm", "qinm", "sxnm", "spnm", "ocnm", "nonm", "ct", "udct"],
 		TEAM_NAMES: {
 			"-1": "Fallen",
@@ -602,12 +564,12 @@ let saveTheme = () => {
 			1: "4 Teams",
 			2: "Tank Editor"
 		},
-		TEAM_COLORS: ["#2c3eb9", "#b91234", "#efb209", "#8b124c"],//[getColors(0), getColors(1), getColors(2), getColors(3)],
-		FALLEN_COLOR: "#c0c0c0",//getColors(4),//
-		CELESTIAL_COLOR: "#76b68b",//getColors(5),//
-		BARREL_COLOR: "#839496",//getColors(6),//
+		TEAM_COLORS: ["#2c3eb9", "#b91234", "#efb209", "#8b124c"],
+		FALLEN_COLOR: "#c0c0c0",
+		CELESTIAL_COLOR: "#76b68b",
+		BARREL_COLOR: "#839496",
 		BACKGROUND_UI_COLOR: "#081e20",
-		SPIKE_COLOR: "#5F676C",//getColors(7),//
+		SPIKE_COLOR: "#5F676C",
 		STROKE_SIZE: 5,
 		STROKE_SHADE: -30,
 		TEXT_STROKE: 10,
@@ -703,7 +665,7 @@ let saveTheme = () => {
 			SETTINGS: "settings",
 			KEYBINDS: "keybinds",
 			GAMEMODE: "gamemode",
-			USERNAME: "username",
+			USERNAME: "username"
 		},
 		UPGRADE_COUNT: 4,
 		MAX_UPGRADE_POINTS: 15,

@@ -6378,7 +6378,7 @@ let saveTheme = () => {
 		l = [];
 
 	function d() {
-		return new Promise((function(e) {
+		/*return new Promise((function(e) {
 			fetch("/changelog.txt").then((function(e) {
 				return e.text()
 			})).then((function(t) {
@@ -6401,7 +6401,7 @@ let saveTheme = () => {
 						document.getElementById("full-changelog").childNodes[1].childNodes[5].innerHTML = e.replace(/\n/g, "<br />")
 					}(), e()
 			}))
-		}))
+		}))*/
 	}
 	var f = "",
 		h = n(3),

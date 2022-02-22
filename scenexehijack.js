@@ -24,9 +24,11 @@ document.getElementById("button-save").addEventListener("click", saveTheme = () 
 		alert(e)
 	}
 })
-//saveTheme()
-let storedTheme = localStorage.getItem('theme')
 
+
+let stored = localStorage.getItem('theme')
+let stringified = JSON.stringify(stored)
+let storedTheme = stringified.replace(/[[|]|"|\\|]/g, '').split(',')
 ! function(e) {
 	var t = {};
 

@@ -1,11 +1,32 @@
-function openNav() {
-    document.getElementById("mySidenav").style.width = "250px";
-    document.getElementById("main").style.marginLeft = "250px";
-  }
-function closeNav() {
-    document.getElementById("mySidenav").style.width = "0";
-    document.getElementById("main").style.marginLeft = "0";
-  }
+document.getElementById("button-theme").addEventListener("click", openBar = () => {
+    document.getElementById("themeBar").style.width = "250px";
+})
+document.getElementById("closeBar").addEventListener("click", closeBar = () => {
+    document.getElementById("themeBar").style.width = "0";
+})
+let themeObj = null
+document.getElementById("button-save").addEventListener("click", saveTheme = () => {
+	let theme = []
+	let themeCompiler = () => {
+		let validHex = /^#([0-9a-f]{3}){1,2}$/i
+		let hexCodes = document.getElementById('themeInput').getElementsByTagName('input')
+		for ( i = 0; i < hexCodes.length; i++) {
+			if (validHex.test(hexCodes[i])) throw 'Invalid hex code!'
+			theme.push(hexCodes[i].value)
+		}
+		localStorage.setItem("theme", JSON.stringify(theme))
+		alert(`Saved theme to your localStorage: ${localStorage.getItem('theme')}`)
+		return theme
+	}
+	try {
+		themeCompiler()
+	} catch (e) {
+		console.error(e)
+		alert(e)
+	}
+})
+let storedTheme = localStorage.getItem('theme')
+
 ! function(e) {
 	var t = {};
 
@@ -530,15 +551,39 @@ function closeNav() {
 		SERVER_TPS: 30,
 		MAX_PARTICLES: 1e3,
 		MAX_LEADERBOARD_ENTRIES: 15,
-		CAMERA_SIZE: 3e3,
+		CAMERA_SIZE: 2e3,
 		CHAT_STAY_TIME: 12,
 		NOTIF_STAY_TIME: 6,
 		MSG_FADE_IN_TIME: .2,
 		MSG_FADE_OUT_TIME: .5,
-		AUTO_SPIN_SPEED: 0.5,
+		AUTO_SPIN_SPEED: 0.8,
 		GRID_STROKE: 3,
-		POLYGON_COLORS: ["#00EAD3", "#FFF5B7", "#F8485E", "#FF449F", "#005F99", "#512D6D", "#00C1D4", "#2EB086", "#313552", "#EEE6CE", "#EEEEEE", "#000000"],
+		POLYGON_COLORS: [storedTheme[8], storedTheme[9], storedTheme[10], storedTheme[11], storedTheme[12], storedTheme[13], storedTheme[14], storedTheme[15], storedTheme[16], storedTheme[17], storedTheme[18], storedTheme[19]],
 		NUMBER_ENDINGS: ["k", "mil", "bil", "tril", "qa", "qi", "sx", "sp", "oc", "no", "dc", "ud", "dd", "td", "qad", "qid", "sxd", "spd", "ocd", "nod", "vg", "uvg", "dvg", "tvg", "qavg", "qivg", "sxvg", "spvg", "ocvg", "novg", "tg", "utg", "dtg", "ttg", "qatg", "qitg", "sxtg", "sptg", "octg", "notg", "qd", "uqd", "dqd", "tqd", "qaqd", "qiqd", "sxqd", "spqd", "ocqd", "noqd", "qq", "uqq", "dqq", "tqq", "qaqq", "qiqq", "sxqq", "spqq", "ocqq", "noqq", "sg", "usg", "dsg", "tsg", "qasg", "qisg", "sxsg", "spsg", "ocsg", "nosg", "st", "ust", "dst", "tst", "qast", "qist", "sxst", "spst", "ocst", "nost", "og", "uog", "dog", "tog", "qaog", "qiog", "sxog", "spog", "ocog", "noog", "nm", "unm", "dnm", "tnm", "qanm", "qinm", "sxnm", "spnm", "ocnm", "nonm", "ct", "udct"],
+		/*
+			blue: theme[0],
+			red: theme[1],
+			green: theme[2],
+			purple: theme[3],
+	
+			fallen: theme[4],
+			celestial: theme[5],
+			barrel: theme[6],
+			spike: theme[7],
+	
+			triangle: theme[8],
+			square: theme[9],
+			pentagon: theme[10],
+			hexagon: theme[11],
+			heptagon: theme[12],
+			octagon: theme[13],
+			nonagon: theme[14],
+			docagon: theme[15],
+			hendecagon: theme[16],
+			dodecagon: theme[17],
+			triskaidecagon: theme[18],
+		*/
+		
 		TEAM_NAMES: {
 			"-1": "Fallen",
 			0: "Lone",
@@ -564,12 +609,12 @@ function closeNav() {
 			1: "4 Teams",
 			2: "Tank Editor"
 		},
-		TEAM_COLORS: ["#2c3eb9", "#b91234", "#efb209", "#8b124c"],
-		FALLEN_COLOR: "#c0c0c0",
-		CELESTIAL_COLOR: "#76b68b",
-		BARREL_COLOR: "#839496",
+		TEAM_COLORS: [storedTheme[0], storedTheme[1], storedTheme[2], storedTheme[3]],
+		FALLEN_COLOR: storedTheme[4],
+		CELESTIAL_COLOR: storedTheme[5],
+		BARREL_COLOR: storedTheme[6],
 		BACKGROUND_UI_COLOR: "#081e20",
-		SPIKE_COLOR: "#5F676C",
+		SPIKE_COLOR: storedTheme[7],
 		STROKE_SIZE: 5,
 		STROKE_SHADE: -30,
 		TEXT_STROKE: 10,
@@ -4500,7 +4545,7 @@ function closeNav() {
 			dimension: {
 				visual: {
 					gridSize: 120,
-					//showMinimap: !1,    // show minimap
+					showMinimap: !1,    // show minimap
 					backgroundColor: "#303030",
 					gridColor: "#232323",
 					wallColor: "#00000054",
@@ -4535,7 +4580,7 @@ function closeNav() {
 							max: "#4E4D4D"
 						}
 					},
-					/*darkness: {
+					darkness: {
 						intensity: 1,
 						color: "#000000"
 					},
@@ -4574,7 +4619,7 @@ function closeNav() {
 						d: 0,
 						sides: 0,
 						transparency: .5
-					}]*/
+					}]
 				},
 				bases: [],
 				walls: [],

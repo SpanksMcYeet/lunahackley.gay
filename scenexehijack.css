@@ -520,10 +520,13 @@ button:focus{
 	background-color:#b58eff
 }
 #button-theme{
-	background-color:#31e8ae
+	background-color:#31e8cd
 }
 #button-save{
 	background-color:#ff5e5e
+}
+#button-import{
+	background-color:#81f476
 }
 #button-bugs{
 	background-color:#fdcdac
@@ -661,7 +664,8 @@ button:focus{
 }
 #subtitle{
 	top:10vmin;
-	font-size:4vmin;
+	font-size:6vmin;
+	color: #7289da;
 	transition:opacity .5s,top .5s
 }
 #changelog.hide,#subtitle.hide{
@@ -1123,7 +1127,7 @@ input:checked+.switch-button:before{
 	left:1vmin;
 	transform-origin:left
 }
-.sidenav {
+.themebar {
     height: 100%;
     width: 0;
     position: fixed;
@@ -1135,7 +1139,7 @@ input:checked+.switch-button:before{
     padding-top: 60px;
     transition: 0.5s;
   }
-  .sidenav a {
+  .themebar a {
     padding: 8px 8px 8px 32px;
     text-decoration: none;
     font-size: 15px;
@@ -1143,21 +1147,18 @@ input:checked+.switch-button:before{
     display: block;
     transition: 0.3s;
   }
-  .sidenav a:hover {
+  .themebar a:hover {
     color: #f1f1f1;
   }
-  .sidenav .closebtn {
+  .themebar .closebtn {
     position: absolute;
     top: 0;
     right: 25px;
     font-size: 36px;
     margin-left: 50px;
   }
-  #main {
-    transition: margin-left .5s;
-    padding: 20px;
-  }
   @media screen and (max-height: 450px) {
-    .sidenav {padding-top: 15px;}
-    .sidenav a {font-size: 18px;}
+    .themebar {padding-top: 15px;}
+    .themebar a {font-size: 18px;}
   }
+  

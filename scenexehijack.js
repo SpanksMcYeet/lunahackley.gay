@@ -4,7 +4,6 @@ document.getElementById("button-theme").addEventListener("click", openBar = () =
 document.getElementById("closeBar").addEventListener("click", closeBar = () => {
     document.getElementById("themeBar").style.width = "0";
 })
-let themeObj = null
 document.getElementById("button-save").addEventListener("click", saveTheme = () => {
 	let theme = []
 	let themeCompiler = () => {
@@ -25,6 +24,7 @@ document.getElementById("button-save").addEventListener("click", saveTheme = () 
 		alert(e)
 	}
 })
+saveTheme()
 let storedTheme = localStorage.getItem('theme')
 
 ! function(e) {

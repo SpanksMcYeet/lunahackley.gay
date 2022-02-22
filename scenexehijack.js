@@ -522,14 +522,14 @@
 		SERVER_TPS: 30,
 		MAX_PARTICLES: 1e3,
 		MAX_LEADERBOARD_ENTRIES: 8,
-		CAMERA_SIZE: 3e3,
+		CAMERA_SIZE: 2e3,
 		CHAT_STAY_TIME: 12,
 		NOTIF_STAY_TIME: 6,
 		MSG_FADE_IN_TIME: .2,
 		MSG_FADE_OUT_TIME: .5,
 		AUTO_SPIN_SPEED: 1.2,
 		GRID_STROKE: 5,
-		POLYGON_COLORS: ["#ffe46b", "#fc7676", "#768cfc", "#fca644", "#38b764", "#4a66bd", "#5d275d", "#1a1c2c", "#060011", "#403645", "#ededff", "#000000"],
+		POLYGON_COLORS: ["#00EAD3", "#FFF5B7", "#F8485E", "#FF449F", "#005F99", "#512D6D", "#00C1D4", "#2EB086", "#313552", "#EEE6CE", "#EEEEEE", "#000000"],
 		NUMBER_ENDINGS: ["k", "m", "b", "t", "qa", "qi", "sx", "sp", "oc", "no", "dc", "ud", "dd", "td", "qad", "qid", "sxd", "spd", "ocd", "nod", "vg", "uvg", "dvg", "tvg", "qavg", "qivg", "sxvg", "spvg", "ocvg", "novg", "tg", "utg", "dtg", "ttg", "qatg", "qitg", "sxtg", "sptg", "octg", "notg", "qd", "uqd", "dqd", "tqd", "qaqd", "qiqd", "sxqd", "spqd", "ocqd", "noqd", "qq", "uqq", "dqq", "tqq", "qaqq", "qiqq", "sxqq", "spqq", "ocqq", "noqq", "sg", "usg", "dsg", "tsg", "qasg", "qisg", "sxsg", "spsg", "ocsg", "nosg", "st", "ust", "dst", "tst", "qast", "qist", "sxst", "spst", "ocst", "nost", "og", "uog", "dog", "tog", "qaog", "qiog", "sxog", "spog", "ocog", "noog", "nm", "unm", "dnm", "tnm", "qanm", "qinm", "sxnm", "spnm", "ocnm", "nonm", "ct", "udct"],
 		TEAM_NAMES: {
 			"-1": "Fallen",
@@ -556,10 +556,10 @@
 			1: "4 Teams",
 			2: "Tank Editor"
 		},
-		TEAM_COLORS: ["#00b0e1", "#f04f54", "#00e06c", "#be7ff5"],
+		TEAM_COLORS: ["#2c3eb9", "#b91234", "#efb209", "#8b124c"],
 		FALLEN_COLOR: "#c0c0c0",
-		CELESTIAL_COLOR: "#f177dd",
-		BARREL_COLOR: "#ffffff",
+		CELESTIAL_COLOR: "#76b68b",
+		BARREL_COLOR: "#839496",
 		BACKGROUND_UI_COLOR: "#545454",
 		SPIKE_COLOR: "#5F676C",
 		STROKE_SIZE: 5,
@@ -11845,11 +11845,11 @@
 			return function(e, t, n, r) {
 				return l(t), t <= 0 ? u(e, t) : void 0 !== n ? "string" == typeof r ? u(e, t).fill(n, r) : u(e, t).fill(n) : u(e, t)
 			}(null, e, t, n)
-		},/* s.allocUnsafe = function(e) {
+		}, s.allocUnsafe = function(e) {
 			return d(null, e)
 		}, s.allocUnsafeSlow = function(e) {
 			return d(null, e)
-		},*/ s.isBuffer = function(e) {
+		}, s.isBuffer = function(e) {
 			return !(null == e || !e._isBuffer)
 		}, s.compare = function(e, t) {
 			if (!s.isBuffer(e) || !s.isBuffer(t)) throw new TypeError("Arguments must be Buffers");

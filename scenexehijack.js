@@ -25,7 +25,7 @@ document.getElementById("button-save").addEventListener("click", saveTheme = () 
 	}
 })
 saveTheme()
-let storedTheme = localStorage.getItem('theme')
+//let storedTheme = localStorage.getItem('theme')
 
 ! function(e) {
 	var t = {};

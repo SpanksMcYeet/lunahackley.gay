@@ -6500,7 +6500,7 @@
 
 	function oe() {
 		Object(r.disconnectFromServer)(!1), document.getElementById("disconnect-modal").classList.remove("hide"), document.getElementById("reconnect-button").onclick = function() {
-			window.location.reload()
+			//window.location.reload()
 		}
 	}
 
@@ -11845,11 +11845,11 @@
 			return function(e, t, n, r) {
 				return l(t), t <= 0 ? u(e, t) : void 0 !== n ? "string" == typeof r ? u(e, t).fill(n, r) : u(e, t).fill(n) : u(e, t)
 			}(null, e, t, n)
-		}, s.allocUnsafe = function(e) {
+		},/* s.allocUnsafe = function(e) {
 			return d(null, e)
 		}, s.allocUnsafeSlow = function(e) {
 			return d(null, e)
-		}, s.isBuffer = function(e) {
+		},*/ s.isBuffer = function(e) {
 			return !(null == e || !e._isBuffer)
 		}, s.compare = function(e, t) {
 			if (!s.isBuffer(e) || !s.isBuffer(t)) throw new TypeError("Arguments must be Buffers");

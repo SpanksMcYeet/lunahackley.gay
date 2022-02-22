@@ -4,6 +4,23 @@ document.getElementById("button-theme").addEventListener("click", openBar = () =
 document.getElementById("closeBar").addEventListener("click", closeBar = () => {
     document.getElementById("themeBar").style.width = "0";
 })
+document.getElementById("button-reset").addEventListener("click", resetTheme = () => {
+	let theme = [
+		"#00b0e1", "#f04f54", "#00e06c", "#be7ff5",	// teams
+		"#c0c0c0",	// fallen
+		"#f177dd",	// celestials
+		"#999999",	// barrels
+		"#5F676C",	// spike
+		"#ffe46b", "#fc7676", "#768cfc", "#fca644", "#38b764", "#4a66bd", "#5d275d", "#1a1c2c", "#060011", "#403645", "#ededff", "#000000"	// polygons
+	]
+	const inputs = document.getElementById('themeInput').getElementsByTagName('input')
+	for (let i = 0; i < inputs.length; i++) {
+		inputs[i].value = theme[i]
+	}
+	localStorage.setItem("theme", JSON.stringify(theme))
+	alert("Reset Theme")
+	return theme
+})
 document.getElementById("button-save").addEventListener("click", saveTheme = () => {
 	let theme = []
 	let themeCompiler = () => {
@@ -24,8 +41,6 @@ document.getElementById("button-save").addEventListener("click", saveTheme = () 
 		alert(e)
 	}
 })
-
-
 let stored = localStorage.getItem('theme')
 let stringified = JSON.stringify(stored)
 let storedTheme = stringified.replace(/[[|]|"|\\|]/g, '').split(',')

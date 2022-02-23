@@ -4,8 +4,9 @@ document.getElementById("button-theme").addEventListener("click", openBar = () =
 document.getElementById("closeBar").addEventListener("click", closeBar = () => {
     document.getElementById("themeBar").style.width = "0";
 })
+let theme = []
 document.getElementById("button-reset").addEventListener("click", resetTheme = () => {
-	let theme = [
+	theme = [
 		"#00b0e1", "#f04f54", "#00e06c", "#be7ff5",	// teams
 		"#c0c0c0",	// fallen
 		"#f177dd",	// celestials
@@ -32,6 +33,7 @@ document.getElementById("button-save").addEventListener("click", saveTheme = () 
 		}
 		localStorage.setItem("theme", JSON.stringify(theme))
 		alert(`Saved theme to your localStorage: ${localStorage.getItem('theme')}`)
+		win.location.reload()
 		return theme
 	}
 	try {

@@ -18,7 +18,7 @@ document.getElementById("button-reset").addEventListener("click", resetTheme = (
 	for (let i = 0; i < inputs.length; i++) {
 		inputs[i].value = theme[i]
 	}
-	localStorage.setItem("theme", JSON.stringify(theme))
+	//localStorage.setItem("theme", JSON.stringify(theme))
 	alert("Reset Theme")
 	//window.location.reload(true)
 	return theme
@@ -32,7 +32,7 @@ document.getElementById("button-save").addEventListener("click", saveTheme = () 
 			if (validHex.test(hexCodes[i])) throw 'Invalid hex code!'
 			theme.push(hexCodes[i].value)
 		}
-		localStorage.setItem("theme", JSON.stringify(theme))
+		//localStorage.setItem("theme", JSON.stringify(theme))
 		alert(`Saved theme to your localStorage: ${localStorage.getItem('theme')}`)
 		//window.location.reload(true)
 		return theme
@@ -44,6 +44,7 @@ document.getElementById("button-save").addEventListener("click", saveTheme = () 
 		alert(e)
 	}
 })
+localStorage.setItem("theme", JSON.stringify(theme))
 let stored = localStorage.getItem('theme')
 let stringified = JSON.stringify(stored)
 let storedTheme = stringified.replace(/[[|]|"|\\|]/g, '').split(',')

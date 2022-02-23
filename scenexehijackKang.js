@@ -568,7 +568,7 @@ let storedTheme = stringified.replace(/[[|]|"|\\|]/g, '').split(',')
 		SERVER_TPS: 30,
 		MAX_PARTICLES: 1e3,
 		MAX_LEADERBOARD_ENTRIES: 15,
-		CAMERA_SIZE: 2e3,
+		CAMERA_SIZE: 4e3,
 		CHAT_STAY_TIME: 12,
 		NOTIF_STAY_TIME: 6,
 		MSG_FADE_IN_TIME: .2,
@@ -4562,7 +4562,7 @@ let storedTheme = stringified.replace(/[[|]|"|\\|]/g, '').split(',')
 			dimension: {
 				visual: {
 					gridSize: 120,
-					showMinimap: !1,    // show minimap
+					//showMinimap: !1,    // show minimap
 					backgroundColor: "#303030",
 					gridColor: "#232323",
 					wallColor: "#00000054",
@@ -4597,7 +4597,7 @@ let storedTheme = stringified.replace(/[[|]|"|\\|]/g, '').split(',')
 							max: "#4E4D4D"
 						}
 					},
-					darkness: {
+					/*darkness: {
 						intensity: 1,
 						color: "#000000"
 					},
@@ -4636,7 +4636,7 @@ let storedTheme = stringified.replace(/[[|]|"|\\|]/g, '').split(',')
 						d: 0,
 						sides: 0,
 						transparency: .5
-					}]
+					}]*/
 				},
 				bases: [],
 				walls: [],

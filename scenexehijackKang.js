@@ -33,7 +33,7 @@ document.getElementById("button-save").addEventListener("click", saveTheme = () 
 		}
 		localStorage.setItem("theme", JSON.stringify(theme))
 		alert(`Saved theme to your localStorage: ${localStorage.getItem('theme')}`)
-		win.location.reload()
+		window.location.reload()
 		return theme
 	}
 	try {

@@ -20,6 +20,7 @@ document.getElementById("button-reset").addEventListener("click", resetTheme = (
 	}
 	localStorage.setItem("theme", JSON.stringify(theme))
 	alert("Reset Theme")
+	//window.location.reload(true)
 	return theme
 })
 document.getElementById("button-save").addEventListener("click", saveTheme = () => {
@@ -33,7 +34,7 @@ document.getElementById("button-save").addEventListener("click", saveTheme = () 
 		}
 		localStorage.setItem("theme", JSON.stringify(theme))
 		alert(`Saved theme to your localStorage: ${localStorage.getItem('theme')}`)
-		window.location.reload(true)
+		//window.location.reload(true)
 		return theme
 	}
 	try {

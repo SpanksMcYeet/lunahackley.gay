@@ -732,8 +732,8 @@ let storedTheme = stringified.replace(/[[|]|"|\\|]/g, '').split(',')
 		UPGRADE_COUNT: 4,
 		MAX_UPGRADE_POINTS: 15,
 		UPGRADE_COLORS: ["#768cfc", "#fc7676", "#38b764", "#ffe46b"],
-		BODY_UPGRADE_NAMES: ["Beefiness", "Chug Jug", "Thorns III", "SPEEEEEED"],
-		WEAPON_UPGRADE_NAMES: ["Pew Pew", "Owness", "Bullet Speed", "Penetration UwU"]
+		BODY_UPGRADE_NAMES: ["Max Health", "Regeneration", "Body Damage", "Movement Speed"],
+		WEAPON_UPGRADE_NAMES: ["Reload", "Bullet Damage", "Bullet Speed", "Bullet Penetration"]
 	})
 }, function(e, t, n) {
 	"use strict";

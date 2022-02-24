@@ -4,34 +4,50 @@ document.getElementById("button-theme").addEventListener("click", openBar = () =
 document.getElementById("closeBar").addEventListener("click", closeBar = () => {
     document.getElementById("themeBar").style.width = "0";
 })
-document.getElementById("button-reset").addEventListener("click", resetTheme = () => {
-	let theme = [
-		"#00b0e1", "#f04f54", "#00e06c", "#be7ff5",	// teams
-		"#c0c0c0",	// fallen
-		"#f177dd",	// celestials
-		"#999999",	// barrels
-		"#5F676C",	// spike
-		"#ffe46b", "#fc7676", "#768cfc", "#fca644", "#38b764", "#4a66bd", "#5d275d", "#1a1c2c", "#060011", "#403645", "#ededff", "#000000"	// polygons
-	]
-	const inputs = document.getElementById('themeInput').getElementsByTagName('input')
-	for (let i = 0; i < inputs.length; i++) {
-		inputs[i].value = theme[i]
+let defaultTheme = [
+	"#00b0e1", "#f04f54", "#00e06c", "#be7ff5",	// teams
+	"#c0c0c0",	// fallen
+	"#f177dd",	// celestials
+	"#999999",	// barrels
+	"#5F676C",	// spike
+	"#ffe46b", "#fc7676", "#768cfc", "#fca644", "#38b764", "#4a66bd", "#5d275d", "#1a1c2c", "#060011", "#403645", "#ededff", "#000000"	// polygons
+]
+let theme = []
+let interpretTheme = json => {
+	if (localStorage.getItem("theme") !== null) {
+		let stored = localStorage.getItem('theme')
+		let stringified = JSON.stringify(stored)
+		json = stringified.replace(/[[|]|"|\\|]/g, '').split(',')
+		let inputs = document.getElementById('themeInput').getElementsByTagName('input')
+		for (let i = 0; i < inputs.length; i++)
+			inputs[i].value = json[i]
+		return json
+	} else {
+		localStorage.setItem("theme", JSON.stringify(defaultTheme))
+		window.location.reload(true)
 	}
-	localStorage.setItem("theme", JSON.stringify(theme))
+}
+document.getElementById("button-reset").addEventListener("click", resetTheme = () => {
+	let inputs = document.getElementById('themeInput').getElementsByTagName('input')
+	for (let i = 0; i < inputs.length; i++)
+		inputs[i].value = defaultTheme[i]
+	localStorage.setItem("theme", JSON.stringify(defaultTheme))
 	alert("Reset Theme")
-	return theme
+	window.location.reload(true)
+	return defaultTheme
 })
 document.getElementById("button-save").addEventListener("click", saveTheme = () => {
 	let theme = []
 	let themeCompiler = () => {
 		let validHex = /^#([0-9a-f]{3}){1,2}$/i
 		let hexCodes = document.getElementById('themeInput').getElementsByTagName('input')
-		for ( i = 0; i < hexCodes.length; i++) {
-			if (validHex.test(hexCodes[i])) throw 'Invalid hex code!'
+		for (let i = 0; i < hexCodes.length; i++) {
+			if (validHex.test(hexCodes[i])) throw new Error('Invalid hex code')
 			theme.push(hexCodes[i].value)
 		}
 		localStorage.setItem("theme", JSON.stringify(theme))
 		alert(`Saved theme to your localStorage: ${localStorage.getItem('theme')}`)
+		window.location.reload(true)
 		return theme
 	}
 	try {
@@ -41,9 +57,27 @@ document.getElementById("button-save").addEventListener("click", saveTheme = () 
 		alert(e)
 	}
 })
-let stored = localStorage.getItem('theme')
-let stringified = JSON.stringify(stored)
-let storedTheme = stringified.replace(/[[|]|"|\\|]/g, '').split(',')
+document.getElementById("button-import").addEventListener("click", exportTheme = () => {
+	let imported = atob(prompt('Please enter your theme code here:', ''))
+	let decoded = imported.match(/.{1,7}/g)
+	if (imported !== null) {
+		let inputs = document.getElementById('themeInput').getElementsByTagName('input')
+		for (let i = 0; i < inputs.length; i++)
+			inputs[i].value = decoded[i]
+		localStorage.setItem("theme", JSON.stringify(decoded))
+		window.location.reload(true)
+		return theme = decoded
+	}
+})
+theme = interpretTheme(theme)
+document.getElementById("button-export").addEventListener("click", exportTheme = () => {
+	let exported = ''
+	let hexCodes = document.getElementById('themeInput').getElementsByTagName('input')
+	for (let i = 0; i < hexCodes.length; i++)
+		exported += hexCodes[i].value
+	prompt('Here is your theme\'s code:', btoa(exported))
+})
+
 ! function(e) {
 	var t = {};
 
@@ -575,32 +609,8 @@ let storedTheme = stringified.replace(/[[|]|"|\\|]/g, '').split(',')
 		MSG_FADE_OUT_TIME: .5,
 		AUTO_SPIN_SPEED: 0.8,
 		GRID_STROKE: 3,
-		POLYGON_COLORS: [storedTheme[8], storedTheme[9], storedTheme[10], storedTheme[11], storedTheme[12], storedTheme[13], storedTheme[14], storedTheme[15], storedTheme[16], storedTheme[17], storedTheme[18], storedTheme[19]],
+		POLYGON_COLORS: [theme[8], theme[9], theme[10], theme[11], theme[12], theme[13], theme[14], theme[15], theme[16], theme[17], theme[18], theme[19]],
 		NUMBER_ENDINGS: ["k", "mil", "bil", "tril", "qa", "qi", "sx", "sp", "oc", "no", "dc", "ud", "dd", "td", "qad", "qid", "sxd", "spd", "ocd", "nod", "vg", "uvg", "dvg", "tvg", "qavg", "qivg", "sxvg", "spvg", "ocvg", "novg", "tg", "utg", "dtg", "ttg", "qatg", "qitg", "sxtg", "sptg", "octg", "notg", "qd", "uqd", "dqd", "tqd", "qaqd", "qiqd", "sxqd", "spqd", "ocqd", "noqd", "qq", "uqq", "dqq", "tqq", "qaqq", "qiqq", "sxqq", "spqq", "ocqq", "noqq", "sg", "usg", "dsg", "tsg", "qasg", "qisg", "sxsg", "spsg", "ocsg", "nosg", "st", "ust", "dst", "tst", "qast", "qist", "sxst", "spst", "ocst", "nost", "og", "uog", "dog", "tog", "qaog", "qiog", "sxog", "spog", "ocog", "noog", "nm", "unm", "dnm", "tnm", "qanm", "qinm", "sxnm", "spnm", "ocnm", "nonm", "ct", "udct"],
-		/*
-			blue: theme[0],
-			red: theme[1],
-			green: theme[2],
-			purple: theme[3],
-	
-			fallen: theme[4],
-			celestial: theme[5],
-			barrel: theme[6],
-			spike: theme[7],
-	
-			triangle: theme[8],
-			square: theme[9],
-			pentagon: theme[10],
-			hexagon: theme[11],
-			heptagon: theme[12],
-			octagon: theme[13],
-			nonagon: theme[14],
-			docagon: theme[15],
-			hendecagon: theme[16],
-			dodecagon: theme[17],
-			triskaidecagon: theme[18],
-		*/
-		
 		TEAM_NAMES: {
 			"-1": "Fallen",
 			0: "Lone",
@@ -626,12 +636,12 @@ let storedTheme = stringified.replace(/[[|]|"|\\|]/g, '').split(',')
 			1: "4 Teams",
 			2: "Tank Editor"
 		},
-		TEAM_COLORS: [storedTheme[0], storedTheme[1], storedTheme[2], storedTheme[3]],
-		FALLEN_COLOR: storedTheme[4],
-		CELESTIAL_COLOR: storedTheme[5],
-		BARREL_COLOR: storedTheme[6],
+		TEAM_COLORS: [theme[0], theme[1], theme[2], theme[3]],
+		FALLEN_COLOR: theme[4],
+		CELESTIAL_COLOR: theme[5],
+		BARREL_COLOR: theme[6],
 		BACKGROUND_UI_COLOR: "#081e20",
-		SPIKE_COLOR: storedTheme[7],
+		SPIKE_COLOR: theme[7],
 		STROKE_SIZE: 5,
 		STROKE_SHADE: -30,
 		TEXT_STROKE: 10,
@@ -1667,7 +1677,7 @@ let storedTheme = stringified.replace(/[[|]|"|\\|]/g, '').split(',')
 	})), _shared_editorconstants__WEBPACK_IMPORTED_MODULE_2__.VISUAL_TEAMS.forEach((function(e) {
 		var t = addChild(visualTeamSelect, "option");
 		t.value = e.value, t.innerText = e.name
-	})), weaponCameraSizeMultiplierInput.onchange = function() {	// FOV?
+	})), weaponCameraSizeMultiplierInput.onchange = function() {
 		currentWeapon.cameraSizeMultiplier = validateNumberAttribute(simplifyNumberInput(weaponCameraSizeMultiplierInput.value), 1), weaponCameraSizeMultiplierInput.value = Math.max(.1, currentWeapon.cameraSizeMultiplier), Object(_networking__WEBPACK_IMPORTED_MODULE_6__.updateWeapon)(), weaponUpdate()
 	}, bodyCameraSizeMultiplierInput.onchange = function() {
 		currentBody.cameraSizeMultiplier = validateNumberAttribute(simplifyNumberInput(bodyCameraSizeMultiplierInput.value), 1), bodyCameraSizeMultiplierInput.value = Math.max(.1, currentBody.cameraSizeMultiplier), Object(_networking__WEBPACK_IMPORTED_MODULE_6__.updateBody)(), bodyUpdate()
@@ -4562,7 +4572,7 @@ let storedTheme = stringified.replace(/[[|]|"|\\|]/g, '').split(',')
 			dimension: {
 				visual: {
 					gridSize: 120,
-					showMinimap: !1,    // show minimap
+					showMinimap: !1,
 					backgroundColor: "#303030",
 					gridColor: "#232323",
 					wallColor: "#00000054",

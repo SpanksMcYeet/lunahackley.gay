@@ -22,6 +22,7 @@ let interpretTheme = json => {
 		let inputs = document.getElementById('themeInput').getElementsByTagName('input')
 		for (let i = 0; i < inputs.length; i++)
 			inputs[i].value = json[i]
+		alert('You may be running on an older version of the script if you are encountering issues, if so, please delete and reload your themes token from the F12 application menu in the localstorage')
 		return json
 	} else {
 		localStorage.setItem("theme", JSON.stringify(defaultTheme))

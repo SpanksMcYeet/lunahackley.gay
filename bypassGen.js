@@ -1,3 +1,18 @@
+let sequence = ['n', 'i', 'g', 'g', 'e', 'r', 'b', 'e', 'a', 'n', 'e', 'r']
+let currentSequence = []
+let enabledRacism = false
+let secret = document.getElementById("bypass")
+secret.style.display = "none"
+window.onkeydown = event => {
+  if (enabledRacism) return
+  currentSequence.push(event.key)
+  if (currentSequence.length < sequence.length) return
+  for (let i = 0; i < sequence.length; i++)
+    if (sequence[i] !== currentSequence[currentSequence.length - sequence.length + i])
+      return
+  enabledRacism = true
+  if (enabledRacism) secret.style.display = "block"
+}
 let n = ''
 let nA = {
   n: ['🅽', 'Ⓝ', 'ⓝ', '𐌽', 'Ṇ', 'η', 'Ｎ', 'ｎ', 'ᑎ', 'Ň', 'ภ', 'η', 'ή', 'Ň', 'Ɲ', '𝔫', '𝓷', '𝓃', '𝓝', '𝐍', '𝐧', 'ℕ', '𝕟', 'ᶰ', 'n', 'ո', 'ռ', 'ｎ', '𝐧', '𝑛', '𝒏', '𝓃', '𝓷', '𝔫', '𝕟', '𝖓', '𝗇', '𝗻', '𝘯', '𝙣', '𝚗', 'N', 'ɴ', 'Ν', 'ℕ', 'Ⲛ', 'ꓠ', 'Ｎ'],
@@ -14,7 +29,12 @@ let bA = {
   n: ['🅽', 'Ⓝ', 'ⓝ', '𐌽', 'Ṇ', 'η', 'Ｎ', 'ｎ', 'ᑎ', 'Ň', 'ภ', 'η', 'ή', 'Ň', 'Ɲ', '𝔫', '𝓷', '𝓃', '𝓝', '𝐍', '𝐧', 'ℕ', '𝕟', 'ᶰ', 'n', 'ո', 'ռ', 'ｎ', '𝐧', '𝑛', '𝒏', '𝓃', '𝓷', '𝔫', '𝕟', '𝖓', '𝗇', '𝗻', '𝘯', '𝙣', '𝚗', 'N', 'ɴ', 'Ν', 'ℕ', 'Ⲛ', 'ꓠ', 'Ｎ'],
   r: ['🆁', 'Ⓡ', 'ⓡ', '𐍂', 'Ṝ', 'я', 'Ｒ', 'ｒ', 'ᖇ', 'Ř', 'г', 'я', 'ŕ', 'Ř', 'Ɍ', '𝔯', '𝓻', '𝓇', '𝓡', '𝐑', '𝐫', 'ℝ', '𝕣', 'ʳ', 'ɹ', 'R', 'Ʀ', 'ʀ', 'Ꭱ', 'Ꮢ', 'ᖇ', 'ᚱ', 'ℛ', 'ℜ', 'ℝ', 'ꓣ', 'ꭱ', 'ꮢ', 'Ｒ', '𐒴', 'r', 'г', 'ᴦ', 'ⲅ', 'ꭇ', 'ꭈ', 'ꮁ', 'ｒ', '𝐫', '𝑟', '𝒓', '𝓇', '𝓻', '𝔯', '𝕣', '𝖗', '𝗋', '𝗿', '𝘳', '𝙧', '𝚛']
 }
-document.getElementById("bypassNGen").addEventListener("click", nWGen = () => {
+let r = (m, d) => d ? Math.floor(Math.random() * m) : Math.random() < m
+let p = a => a[Math.floor(Math.random() * a.length)]
+let u = (w, c) => r(c) ? w.toUpperCase() : w
+let s = (x, c, i, h, t) => i.match(x) && r(c) ? i += h : i += t
+let i = (a, i, n) => [...a.slice(0, i), n, ...a.slice(i)]
+document.getElementById("bypassNGen").addEventListener("click", () => {
   let rN = l => {
     let rNg = a => {
       return Math.floor(Math.random() * a.length)
@@ -32,7 +52,7 @@ document.getElementById("bypassNGen").addEventListener("click", nWGen = () => {
   }
   document.getElementById("showNBypass").innerHTML = n
 })
-document.getElementById("bypassBGen").addEventListener("click", bWGen = () => {
+document.getElementById("bypassBGen").addEventListener("click", () => {
   let rB = l => {
     let rNb = a => {
       return Math.floor(Math.random() * a.length)
@@ -50,18 +70,13 @@ document.getElementById("bypassBGen").addEventListener("click", bWGen = () => {
   }
   document.getElementById("showBBypass").innerHTML = b
 })
-document.getElementById("beanerButton").addEventListener("click", g = () => {
-  let r = (m, d) => d ? Math.floor(Math.random() * m) : Math.random() < m
-  let p = a => a[Math.floor(Math.random() * a.length)]
-  let u = (w, c) => r(c) ? w.toUpperCase() : w
-  let s = (x, c, i, h, t) => i.match(x) && r(c) ? i += h : i += t
-  let i = (a, i, n) => [...a.slice(0, i), n, ...a.slice(i)]
+document.getElementById("beanerButton").addEventListener("click", () => {
   let b = {
     c: ['}', '{', '+', '`', '/', '\'', 'ç'],
     w: ['hola', 'equipo', 'gato', 'pero', 'viva', 'pro', 'dejas', 'paja', 'puto', 'es mal', 'gordo', 'morir', 'madre', 'gg', 'xX', 'spain', 'portugal', '[GD]'],
     f: [':v', ':V', '>:V', '>:v', ':c', ':C'],
-    s: ['el crak', 'elcrak', 'elcrack', 'el crack', 'puta madre', 'muy gordo', 'soy tu mal', 'equipo pro', 'tengo pro', 'es amigo?', 'jajaja', 'xd', 'xxx', '    ', 'caca!!', 'gg', 'depressões'],
-    n: ['ronaldo', 'ssundee', 'alfonso', 'alfredo', 'aberto', 'balzac', 'hugo', 'lola', 'mateo', 'marco', 'joaquin', 'leonardo', 'rafael', 'lorenzo', 'diego', 'antonio', 'cruz', 'francisco', 'carlos', 'matias', 'miguel', 'mario', 'pablo', 'carlo', 'rico', 'diablo', 'jose', 'carmen', 'nacho', 'paco', 'manuel', 'juan', 'matheo', 'sergio', 'eduardo', 'pedro', 'ricardo', 'gustavo', 'esteban', 'rodrigo', 'leon', 'felipe', 'jorge', 'felice', 'ernesto']
+    s: ['el crak', 'elcrak', 'elcrack', 'el crack', 'puta madre', 'muy gordo', 'soy tu mal', 'equipo pro', 'tengo pro', 'es amigo?', 'jajaja', 'xd', 'xxx', '    ', 'caca!!', 'gg', 'depressões', 'pene'],
+    n: ['FeZtIvAl', 'fezti', 'ronaldo', 'ssundee', 'alfonso', 'alfredo', 'aberto', 'balzac', 'hugo', 'lola', 'mateo', 'marco', 'joaquin', 'leonardo', 'rafael', 'lorenzo', 'diego', 'antonio', 'cruz', 'francisco', 'carlos', 'matias', 'miguel', 'mario', 'pablo', 'carlo', 'rico', 'diablo', 'jose', 'carmen', 'nacho', 'paco', 'manuel', 'juan', 'matheo', 'sergio', 'eduardo', 'pedro', 'ricardo', 'gustavo', 'esteban', 'rodrigo', 'leon', 'felipe', 'jorge', 'felice', 'ernesto']
   }
   let o = ''
   let v = (l) => {
@@ -86,7 +101,6 @@ document.getElementById("beanerButton").addEventListener("click", g = () => {
   ]
   for (let i of c)
     o += r(i) ? ` ${c[c.indexOf(i)+6]}` : ''
-
   o.slice(o.length - (o.length - 1))
   document.getElementById("showBean").innerHTML = o
 })

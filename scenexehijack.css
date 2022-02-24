@@ -522,11 +522,17 @@ button:focus{
 #button-theme{
 	background-color:#31e8cd
 }
-#button-save{
+#button-reset{
 	background-color:#ff5e5e
 }
-#button-import{
+#button-save{
 	background-color:#81f476
+}
+#button-import{
+	background-color:#652178
+}
+#button-export{
+	background-color:#d3a200
 }
 #button-bugs{
 	background-color:#fdcdac

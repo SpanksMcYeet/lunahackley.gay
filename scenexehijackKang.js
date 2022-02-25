@@ -10,7 +10,8 @@ let defaultTheme = [
 	"#f177dd",	// celestials
 	"#999999",	// barrels
 	"#5F676C",	// spike
-	"#ffe46b", "#fc7676", "#768cfc", "#fca644", "#38b764", "#4a66bd", "#5d275d", "#1a1c2c", "#060011", "#403645", "#ededff", "#000000"	// polygons
+	"#ffe46b", "#fc7676", "#768cfc", "#fca644", "#38b764", "#4a66bd", "#5d275d", "#1a1c2c", "#060011", "#403645", "#ededff", "#000000",	// polygons
+	"#C8C8C8", "#CDCDCD"	// background
 ]
 let theme = []
 let interpretTheme = json => {
@@ -27,7 +28,7 @@ let interpretTheme = json => {
 		window.location.reload(true)
 	}
 }
-document.getElementById("button-reset").addEventListener("click", resetTheme = () => {
+document.getElementById("button-reset").addEventListener("click", () => {
 	let inputs = document.getElementById('themeInput').getElementsByTagName('input')
 	for (let i = 0; i < inputs.length; i++)
 		inputs[i].value = defaultTheme[i]
@@ -36,7 +37,7 @@ document.getElementById("button-reset").addEventListener("click", resetTheme = (
 	window.location.reload(true)
 	return defaultTheme
 })
-document.getElementById("button-save").addEventListener("click", saveTheme = () => {
+document.getElementById("button-save").addEventListener("click", () => {
 	let theme = []
 	let themeCompiler = () => {
 		let validHex = /^#([0-9a-f]{3}){1,2}$/i
@@ -57,7 +58,7 @@ document.getElementById("button-save").addEventListener("click", saveTheme = () 
 		alert(e)
 	}
 })
-document.getElementById("button-import").addEventListener("click", exportTheme = () => {
+document.getElementById("button-import").addEventListener("click", () => {
 	let imported = atob(prompt('Please enter your theme code here:', ''))
 	let decoded = imported.match(/.{1,7}/g)
 	if (imported !== null) {
@@ -70,7 +71,7 @@ document.getElementById("button-import").addEventListener("click", exportTheme =
 	}
 })
 theme = interpretTheme(theme)
-document.getElementById("button-export").addEventListener("click", exportTheme = () => {
+document.getElementById("button-export").addEventListener("click", () => {
 	let exported = ''
 	let hexCodes = document.getElementById('themeInput').getElementsByTagName('input')
 	for (let i = 0; i < hexCodes.length; i++)
@@ -602,7 +603,7 @@ document.getElementById("button-export").addEventListener("click", exportTheme =
 		SERVER_TPS: 30,
 		MAX_PARTICLES: 1e3,
 		MAX_LEADERBOARD_ENTRIES: 15,
-		CAMERA_SIZE: 4e3,
+		CAMERA_SIZE: 2e3,
 		CHAT_STAY_TIME: 12,
 		NOTIF_STAY_TIME: 6,
 		MSG_FADE_IN_TIME: .2,
@@ -4607,7 +4608,7 @@ document.getElementById("button-export").addEventListener("click", exportTheme =
 							max: "#4E4D4D"
 						}
 					},
-					/*darkness: {
+					darkness: {
 						intensity: 1,
 						color: "#000000"
 					},
@@ -4646,7 +4647,7 @@ document.getElementById("button-export").addEventListener("click", exportTheme =
 						d: 0,
 						sides: 0,
 						transparency: .5
-					}]*/
+					}]
 				},
 				bases: [],
 				walls: [],
@@ -6225,13 +6226,13 @@ document.getElementById("button-export").addEventListener("click", exportTheme =
 				g = Object(d.j)(i.speed.min, i.speed.max);
 			cn(ze + Math.random() * u - u / 2, We + Math.random() * u - u / 2, g * Math.sin(p), g * Math.cos(p), Object(d.j)(i.size.min, i.size.max), Math.random() * Math.PI * 2, Math.round(Object(d.j)(i.sides.min, i.sides.max)), Tt(Mt(Ot(i.color.min), Ot(i.color.max), Math.random())), Object(d.j)(i.lifetime.min, i.lifetime.max), Object(d.j)(i.transparency.min, i.transparency.max), i.radiant ? 1 : 0)
 		}
-		Le.fillStyle = o.backgroundColor, Le.fillRect(0, 0, Le.canvas.width, Le.canvas.height);
+		Le.fillStyle = theme[21], Le.fillRect(0, 0, Le.canvas.width, Le.canvas.height);
 		var v = W.GRID_STROKE / Ue;
 		if (v > .3) {
 			var _ = o.gridSize / Ue,
 				m = Math.round(n / _) * _,
 				y = Math.round(r / _) * _;
-			Le.lineWidth = v, Le.strokeStyle = o.gridColor, Le.beginPath();
+			Le.lineWidth = v, Le.strokeStyle = theme[20], Le.beginPath();
 			for (var b = n; b < Le.canvas.width + n; b += _) Le.moveTo(b - m, 0), Le.lineTo(b - m, Le.canvas.height);
 			for (var E = r; E < Le.canvas.height + r; E += _) Le.moveTo(0, E - y), Le.lineTo(Le.canvas.width, E - y);
 			Le.closePath(), Le.stroke()

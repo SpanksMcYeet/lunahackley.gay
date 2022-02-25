@@ -603,7 +603,7 @@ document.getElementById("button-export").addEventListener("click", () => {
 		SERVER_TPS: 30,
 		MAX_PARTICLES: 1e3,
 		MAX_LEADERBOARD_ENTRIES: 15,
-		CAMERA_SIZE: 2e3,
+		CAMERA_SIZE: 4e3,
 		CHAT_STAY_TIME: 12,
 		NOTIF_STAY_TIME: 6,
 		MSG_FADE_IN_TIME: .2,

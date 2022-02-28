@@ -1,56 +1,44 @@
 <html>
-  <head>
-    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
-    <link href="main.css" rel="stylesheet">
-    <meta name="description" content="
-      ———————————No bitches?———————————
-      ⠀⣞⢽⢪⢣⢣⢣⢫⡺⡵⣝⡮⣗⢷⢽⢽⢽⣮⡷⡽⣜⣜⢮⢺⣜⢷⢽⢝⡽⣝
-      ⠸⡸⠜⠕⠕⠁⢁⢇⢏⢽⢺⣪⡳⡝⣎⣏⢯⢞⡿⣟⣷⣳⢯⡷⣽⢽⢯⣳⣫⠇
-      ⠀⠀⢀⢀⢄⢬⢪⡪⡎⣆⡈⠚⠜⠕⠇⠗⠝⢕⢯⢫⣞⣯⣿⣻⡽⣏⢗⣗⠏⠀
-      ⠀⠪⡪⡪⣪⢪⢺⢸⢢⢓⢆⢤⢀⠀⠀⠀⠀⠈⢊⢞⡾⣿⡯⣏⢮⠷⠁⠀⠀
-      ⠀⠀⠀⠈⠊⠆⡃⠕⢕⢇⢇⢇⢇⢇⢏⢎⢎⢆⢄⠀⢑⣽⣿⢝⠲⠉⠀⠀⠀⠀
-      ⠀⠀⠀⠀⠀⡿⠂⠠⠀⡇⢇⠕⢈⣀⠀⠁⠡⠣⡣⡫⣂⣿⠯⢪⠰⠂⠀⠀⠀⠀
-      ⠀⠀⠀⠀⡦⡙⡂⢀⢤⢣⠣⡈⣾⡃⠠⠄⠀⡄⢱⣌⣶⢏⢊⠂⠀⠀⠀⠀⠀⠀
-      ⠀⠀⠀⠀⢝⡲⣜⡮⡏⢎⢌⢂⠙⠢⠐⢀⢘⢵⣽⣿⡿⠁⠁⠀⠀⠀⠀⠀⠀⠀
-      ⠀⠀⠀⠀⠨⣺⡺⡕⡕⡱⡑⡆⡕⡅⡕⡜⡼⢽⡻⠏⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-      ⠀⠀⠀⠀⣼⣳⣫⣾⣵⣗⡵⡱⡡⢣⢑⢕⢜⢕⡝⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-      ⠀⠀⠀⣴⣿⣾⣿⣿⣿⡿⡽⡑⢌⠪⡢⡣⣣⡟⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-      ⠀⠀⠀⡟⡾⣿⢿⢿⢵⣽⣾⣼⣘⢸⢸⣞⡟⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-      ⠀⠀⠀⠀⠁⠇⠡⠩⡫⢿⣝⡻⡮⣒⢽⠋⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-      —————————————————————————————
-    ">
-    <meta property="og:image" content="https://media.discordapp.net/attachments/826241646864891955/931423066976813066/20220110_233740.gif">
-    <meta property="og:image:width" content="54">
-    <meta property="og:image:height" content="54">
-    <title>Luna Hackley</title>
-  </head>
-  <body class="body overflow-hidden bg-gradient-to-br from-blue-600 to-red-500">
-    <div class="gifbutton grid place-content-start">
-      <span id="gifClickable" class="button absolute h-12 w-40 font-semibold text-lg text-right shadow-md shadow-black rounded border-2 border-solid text-white">Discord Gifs</span>
-      <img class="gif left-1 relative h-12 w-12" src="./assets/gif.svg">
-      <div class="popup relative inline-block">
-        <span class="popText text-white bg-green-600 absolute w-32 h-5 text-xs text-center rounded-bottom-15 left-4" id="gifPopup">Link Copied!</span>
-      </div>
-    </div>
-    <div class="desc flex justify-center items-center h-screen flex-col">
-      <span class="luna opacity-0 h-24 bg-clip-text text-transparent bg-gradient-to-r from-purple-900 to-red-700 text-5xl font-black">Luna Hackley</span>
-      <span class="subL opacity-0 h-12 bg-clip-text text-transparent bg-gradient-to-r from-gray-300 to-gray-100 text-3xl font-black">Microbiologist</span>
-      <span class="subR opacity-0 h-12 bg-clip-text text-transparent bg-gradient-to-r from-gray-100 to-gray-300 text-3xl font-black">Programmer</span>
-      <span class="subL opacity-0 h-12 bg-clip-text text-transparent bg-gradient-to-r from-gray-300 to-gray-100 text-3xl font-black">Gamer</span>
-      <div class="colorfix flex justify-center items-center absolute border-[#7289da]">
-        <div class="icon"><a href="https://www.reddit.com/user/SpanksMcYeet" target="_blank" class="float h-12 w-12"><img class="reddit" src="./assets/reddit.svg"></a></div>
-        <div class="icon"><a href="https://steamcommunity.com/profiles/76561198849964509/" target="_blank" class="float h-12 w-12"><img class="steam" src="./assets/steam.svg"></a></div>
-        <div class="icon"><a href="https://github.com/SpanksMcYeet" target="_blank" class="float h-12 w-12"><img class="github" src="./assets/github.svg"></a></div>
-        <div class="icon"><a href="" target="_blank" class="float h-12 w-12"><img class="onlyfans" src="./assets/onlyfans.svg"></a></div> <!--https://onlyfans.com/lunaclles-->
-        <div class="icon"><a href="https://open.spotify.com/user/63scmpwlrtoxlryndbspxg5me" target="_blank" class="float h-12 w-12"><img class="spotify" src="./assets/spotify.svg"></a></div>
-        <div class="icon"><a href="https://www.youtube.com/channel/UCbXP8fhJp_VDp0nlEcKTE4g" target="_blank" class="float h-12 w-12"><img class="youtube" src="./assets/youtube.svg"></a></div>
-        <div class="icon"><a href="https://www.youtube.com/watch?v=xvFZjo5PgG0" target="_blank" class="float h-12 w-12"><img class="discord" src="./assets/discord.svg"></a></div>
-        <div class="icon"><a href="https://www.twitch.tv/spanksmcyeet" target="_blank" class="float h-12 w-12"><img class="twitch" src="./assets/twitch.svg"></a></div>
-        <div class="icon"><a href="https://glitch.com/@xenogaming1426" target="_blank" class="float h-12 w-12"><img class="glitch" src="./assets/glitch.svg"></a></div>
-        <div class="icon"><a href="https://greasyfork.org/en/users/690420-damocles" target="_blank" class="float h-12 w-12"><img class="greasyfork" src="./assets/greasyfork.svg"></a></div>
-      </div>
-    </div>
-    <div id="gif-button" class="opacity-0 relative"></div>
-  </body>
-  <script src="index.js"></script>
+    <head>
+        <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+        <link href="main.styl" rel="stylesheet">
+
+    </head>
+    <body class="bg-black">
+        <div class="squiggly text-white flex justify-center items-center h-screen flex-col">
+            Goodbye.
+            <p id="heart" class="small"><p/>
+            <p class="smaller">I'll miss you all</p>
+          </div>
+          <div class="text-white flex justify-center items-center h-screen flex-col"></div>
+          <script>
+            document.getElementById("heart").innerHTML += "<3"
+          </script>
+          <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+            <defs>
+              <filter id="squiggly-0">
+                <feTurbulence baseFrequency="0.02" numOctaves="3" result="noise" seed="0"/>
+                <feDisplacementMap id="displacement" in="SourceGraphic" in2="noise" scale="6" />
+              </filter>
+              <filter id="squiggly-1">
+                <feTurbulence baseFrequency="0.02" numOctaves="3" result="noise" seed="1"/>
+          <feDisplacementMap in="SourceGraphic" in2="noise" scale="8" />
+              </filter>
+              
+              <filter id="squiggly-2">
+                <feTurbulence baseFrequency="0.02" numOctaves="3" result="noise" seed="2"/>
+          <feDisplacementMap in="SourceGraphic" in2="noise" scale="6" />
+              </filter>
+              <filter id="squiggly-3">
+                <feTurbulence baseFrequency="0.02" numOctaves="3" result="noise" seed="3"/>
+          <feDisplacementMap in="SourceGraphic" in2="noise" scale="8" />
+              </filter>
+              
+              <filter id="squiggly-4">
+                <feTurbulence  baseFrequency="0.02" numOctaves="3" result="noise" seed="4"/>
+          <feDisplacementMap in="SourceGraphic" in2="noise" scale="6" />
+              </filter>
+            </defs> 
+          </svg>
+    </body>
 </html>

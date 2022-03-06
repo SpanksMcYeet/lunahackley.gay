@@ -54,15 +54,6 @@
   animation-delay: 2s;
   opacity: 0;
 }
-/*.micro {
-  transform: translate(0,2vh)
-}
-.code {
-  transform: translate(0,-13.5vh)
-}
-.gay {
-  transform: translate(0,-28vh)
-}*/
 @keyframes subtextL {
   /*
   f--------a  

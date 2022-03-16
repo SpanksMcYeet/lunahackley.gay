@@ -1,4 +1,4 @@
-let grabGif = () => {
+document.getElementById("gifClickable").addEventListener("click", () => {
     let L = [
         'emlwLWJvbWIta2FueWUtd2VzdC1rYW55ZS13ZXN0LXN0YXJpbmctZ2lmLTIxNDc5ODA4', 'dGhlcmUtaXMtYS16aXAtYm9tYi1pbi15b3VyLW1haWxib3gtemlwLWJvbWItcGlwZS1ib21iLXRoZXJlLWlzLWEtcGlwZS1ib21iLWluLXlvdXItbWFpbGJveC1naWYtMjI2MjMwNjE', 'c2tpbndhbGtlci1naWYtMjM2MTYwODY', 'ZHJhZ29uY2FyLWdpZi0xOTQxMjM2NA', 'dG9ueS1zdGFyay1zaHJ1Zy10b255LXN0YXJrLXNocnVnLW5pY2UtYXJndW1lbnQtYnV0LWktaGF2ZS15b3VyLWhvbWUtYWRkcmVzcy1uaWNlLWFyZ3VtZW50LWJ1dC1naWYtMjMxMzYzNzk', 'aHVtb3ItbW9ybmluZy10ZWV0aC1yZW1lbWJlci1kZW50aXN0LWdpZi0xNDU3NDgzOQ', 'c3BvbmdlYm9ic2V4c3BlZWRydW4tZ2lmLTIxNTgyNTgw', 'd2VpbGFuZC1nYXZpbi1uZXJkLWlwLWktaGF2ZS1naWYtMjIxMjEwNTk', 'bmFoLWJydWgtYWgtb2staS11bmRlcnRhbmQtbm93LWdpZi0yMjk4MjU2MQ', 
         'ZG9udC1jYXJlLWRpZG50LWFzay1jb3BlLV9yYXRpby1za2lsbC1pc3N1ZS1jYW5jZWxlZC1naWYtMjQxNDgwNjQ', 'bWUtYW5kLXRoZS1ib3lzLXdoZW4tdGhlLXdhdGVyLWhvbGUtaXMtdW5kZXItYXR0YWNrLW9uLW91ci13YXktZ2lmLTE2NDQ1NTY2', 'ZXBpYy1lbWJlZC1mYWlsLWVtYmVkLWZhaWwtbmlrb2NhZG8tbmlrb2NhZG8tZmFpbC1naWYtMjEyMDYxMjA', 'Zm9ydG5pdGUtdGhlLXJvY2stZm9ydG5pdGUtdGhlLXJvY2stZm91bmRhdGlvbi1mb3J0bml0ZS1mb3VuZGF0aW9uLWdpZi0yNDAxOTY5OQ', 'cGF0cmljay1jcmFuay1kYXQtZ2lmLTE5MzI4MTA0', 'dHJvbGwtdHJvbGxpbmctbWVtZS1wYy1ib3lzLXdlLWRvLWEtbGl0dGxlLXRyb2xsaW5nLWdpZi0yMDcyNjEwMA', 'cGF0cmljay1iYXRlbWFuLWNocmlzdGlhbi1iYWxlLWFtZXJpY2FuLXBzeWNoby1mdW5ueS11bmZ1bm55LWdpZi0yMzY2Mjk5MQ', 'Ym9uZXItZ2lmLTI0MTgxNzQz', 'Zm5hZi1mbmFmLXNlY3VyaXR5LWJyZWFjaC1wdXJwbGUtZ3V5LW1hbi1iZWhpbmQtdGhlLXNsYXVnaHRlci1maXZlLW5pZ2h0cy1hdC1mcmVkZHlzLWdpZi0yNDE5NjU1MA', 'd2hpdGUtd29tYW4tanVtcHNjYXJlLWZuYWYtc2VjdXJpdHktYnJlYWNoLXNlY3VyaXR5LWJyZWFjaC12YW5lc3NhLXdoaXRlLXdvbWFuLWdpZi0yNDIwNTg4MA', 'ZGV2aW91cy1saWNrLWRpYWJvbGljYWwtbGljay1tb25rZS1saWNrLXRpa3Rvay1naWYtMjMxMjM1MDU', 
@@ -64,13 +64,10 @@ let grabGif = () => {
         return m = M
     }
     N()
-    return document.getElementById("gif-button").innerHTML = M(m[0], m[1])
-}
-let copyText = () => {
-    grabGif()
-    let gif = document.getElementById("gif-button").innerHTML
-    navigator.clipboard.writeText(gif).then(() => {
-        let popup = document.getElementById("gifPopup")
-        popup.classList.toggle("show")
+    document.getElementById("gif-button").innerHTML = M(m[0], m[1])
+    let g = document.getElementById("gif-button").innerHTML
+    navigator.clipboard.writeText(g).then(() => {
+        let p = document.getElementById("gifPopup")
+        p.classList.toggle("show")
     })
-}
+})

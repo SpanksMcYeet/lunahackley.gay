@@ -2,6 +2,9 @@ module.exports = {
   content: [],
   theme: {
     extend: {
+      colors: {
+        'discord': '#7289da',
+      },
       keyframes: {
         bggradient: {
           '0%': {

@@ -1,3 +1,37 @@
+.themebar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  padding-top: 60px;
+  transition: 0.5s;
+}
+.themebar a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 15px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+.themebar a:hover {
+  color: #f1f1f1;
+}
+.themebar .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+@media screen and (max-height: 450px) {
+  .themebar {padding-top: 15px;}
+  .themebar a {font-size: 18px;}
+}
 .popup .popText {
   visibility: hidden;
 }
@@ -22,8 +56,6 @@
 .button {
   font-family: Whitney, "Open Sans", Helvetica, sans-serif;
   cursor: pointer;
-  background-color: #7289da;
-  border: #7289da;
 }
 .gif {
   filter: invert(60%) hue-rotate(0deg) brightness(150%) contrast(100%)
@@ -54,15 +86,6 @@
   animation-delay: 2s;
   opacity: 0;
 }
-/*.micro {
-  transform: translate(0,2vh)
-}
-.code {
-  transform: translate(0,-13.5vh)
-}
-.gay {
-  transform: translate(0,-28vh)
-}*/
 @keyframes subtextL {
   /*
   f--------a  

@@ -43,7 +43,7 @@
   animation: fadeIn 1s;
   animation: fadeIn 1s
 }
-.gifbutton {
+.extras {
   animation: fadeIn 1s linear;
   animation-fill-mode: forwards; 
   animation-delay: 6.5s;
@@ -57,7 +57,7 @@
   font-family: Whitney, "Open Sans", Helvetica, sans-serif;
   cursor: pointer;
 }
-.gif {
+.svg {
   filter: invert(60%) hue-rotate(0deg) brightness(150%) contrast(100%)
 }
 .desc {

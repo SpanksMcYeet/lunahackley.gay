@@ -1,3 +1,16 @@
+const r = (m, v) => v ? Math.floor(Math.random() * m) : Math.random() < m
+const p = a => a[Math.floor(Math.random() * a.length)]
+const u = (w, c) => r(c) ? w.toUpperCase() : w
+const s = (l, c, i, a, o) => i.match(l) && r(c) ? i += a : i += o
+const i = (a, i, n) => [...a.slice(0, i), n, ...a.slice(i)]
+const cp = (i, p, t) => {
+    document.getElementById(i).innerHTML = t
+    let g = document.getElementById(i).innerHTML
+    navigator.clipboard.writeText(g).then(() => {
+        let o = document.getElementById(p)
+        o.classList.toggle("show")
+    })
+}
 document.getElementById("gifClickable").addEventListener("click", () => {
     let L = [
         'emlwLWJvbWIta2FueWUtd2VzdC1rYW55ZS13ZXN0LXN0YXJpbmctZ2lmLTIxNDc5ODA4', 'dGhlcmUtaXMtYS16aXAtYm9tYi1pbi15b3VyLW1haWxib3gtemlwLWJvbWItcGlwZS1ib21iLXRoZXJlLWlzLWEtcGlwZS1ib21iLWluLXlvdXItbWFpbGJveC1naWYtMjI2MjMwNjE', 'c2tpbndhbGtlci1naWYtMjM2MTYwODY', 'ZHJhZ29uY2FyLWdpZi0xOTQxMjM2NA', 'dG9ueS1zdGFyay1zaHJ1Zy10b255LXN0YXJrLXNocnVnLW5pY2UtYXJndW1lbnQtYnV0LWktaGF2ZS15b3VyLWhvbWUtYWRkcmVzcy1uaWNlLWFyZ3VtZW50LWJ1dC1naWYtMjMxMzYzNzk', 'aHVtb3ItbW9ybmluZy10ZWV0aC1yZW1lbWJlci1kZW50aXN0LWdpZi0xNDU3NDgzOQ', 'c3BvbmdlYm9ic2V4c3BlZWRydW4tZ2lmLTIxNTgyNTgw', 'd2VpbGFuZC1nYXZpbi1uZXJkLWlwLWktaGF2ZS1naWYtMjIxMjEwNTk', 'bmFoLWJydWgtYWgtb2staS11bmRlcnRhbmQtbm93LWdpZi0yMjk4MjU2MQ', 
@@ -64,10 +77,51 @@ document.getElementById("gifClickable").addEventListener("click", () => {
         return m = M
     }
     N()
-    document.getElementById("gif-button").innerHTML = M(m[0], m[1])
-    let g = document.getElementById("gif-button").innerHTML
-    navigator.clipboard.writeText(g).then(() => {
-        let p = document.getElementById("gifPopup")
-        p.classList.toggle("show")
-    })
+    cp("gif-button", "gifPopup", M(m[0], m[1]))
+})
+
+document.getElementById("beanerClickable").addEventListener("click", () => {
+    let b = {
+        c: ['}', '{', '+', '`', '/', '\'', 'ç', ' '],
+        w: ['hola', 'equipo', 'gato', 'pero', 'viva', 'pro', 'dejas', 'paja', 'puto', 'es mal', 'gordo', 'morir', 'madre', 'gg', 'xX', 'spain', 'portugal', '[GD]'],
+        f: [':v', ':V', '>:V', '>:v', ':c', ':C', 'XD'],
+        s: ['el crak', 'elcrak', 'elcrack', 'el crack', 'puta madre', 'muy gordo', 'soy tu mal', 'equipo pro', 'tengo pro', 'es amigo?', 'jajaja', 'xd', 'xxx', '    ', 'caca!!', 'gg', 'depressões'],
+        n: ['ronaldo', 'ssundee', 'alfonso', 'alfredo', 'aberto', 'balzac', 'hugo', 'lola', 'mateo', 'marco', 'joaquin', 'leonardo', 'rafael', 'lorenzo', 'diego', 'antonio', 'cruz', 'francisco', 'carlos', 'matias', 'miguel', 'mario', 'pablo', 'carlo', 'rico', 'diablo', 'jose', 'carmen', 'nacho', 'paco', 'manuel', 'juan', 'matheo', 'sergio', 'eduardo', 'pedro', 'ricardo', 'gustavo', 'esteban', 'rodrigo', 'leon', 'felipe', 'jorge', 'felice', 'ernesto'],
+        //space: ['[]', '[}', '{}', '()', ']', '[', ']', '}', '{', ')', '(', '.', ',', '%', '%%', '`', '?', '!', '>', '<', '', '_', '/', '\\', `${space(5)}`]
+    }
+    let o = ''
+    let v = l => {
+        let c = ''
+        for (let i = 0; i < l; i++)
+            c = s(/[}{+]$/g, 0.6, c, '+', p(b.c))
+        return c
+    }
+    let n = (e, c, a) => {
+        let k = e.split('')
+        let g = ' '
+        return r(c) ? i(k, k.indexOf(p(k)), g.repeat(r(a, true))).join('') : e
+    }
+    let h = (s, c) => {
+        w = u(s, 0.4)
+        let m = s.split('')
+        w = ''
+        for (let i of m)
+            w += r(c) ? i.toUpperCase() : i
+        return w
+    }
+    let c = [
+      0.1, 0.3, 0.8, 0.4, 0.2, 0.75,
+      v(2),
+      h(p(b.w), 0.4),
+      n(r(0.2) ? h(p(b.n), 0.4) : p(b.n), 0.2, 5),
+      h(p(b.s), 0.4),
+      p(b.f),
+      v(7)
+    ]
+    
+    for (let i of c) {
+      o += r(i) ? ` ${c[c.indexOf(i)+6]}` : ''
+    }
+    o.slice(o.length - (o.length - 1))
+    cp("bean-button", "beanPopup", o)
 })

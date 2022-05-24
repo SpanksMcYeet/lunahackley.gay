@@ -9,9 +9,9 @@
     <title>Luna Hackley</title>
   </head>
   <body class="body overflow-hidden bg-gradient-to-br from-blue-600 to-red-500">
-    <div class="absolute gap-x-96 flex flex-wrap flex-row justify-center items-center w-screen h-24">
+    <div class="absolute gap-x-10 flex flex-wrap flex-row justify-center items-center w-1/2 h-24">
       <div class="extras z-10 h-20 w-40 relative -top-2 left-0 flex justify-center items-center flex-col cursor-pointer">
-        <div id="gifClickable" class="extras absolute z-10 h-12 w-36 shadow-md shadow-black rounded border-2 border-solid bg-[#7289da] top-2 left-2 flex justify-center items-center flex-col"></div>
+        <div id="gifClickable" class="extras absolute z-10 h-12 w-36 shadow-md shadow-black rounded border-2 border-solid top-2 left-2 flex justify-center items-center flex-col"></div>
         <div class="absolute leading-none inline-block align-middle top-3 right-3 h-12 w-20 font-semibold text-lg text-center text-white bg-[#7289da]">Discord Gifs</div>
         <img class="svg right-11 -top-2 relative h-12 w-12" src="./assets/gif.svg">
         <div class="popup">
@@ -19,12 +19,23 @@
         </div>
       </div>
       <div id="beanerClickable" class="extras z-10 h-20 w-40 relative -top-2 left-0 flex justify-center items-center flex-col cursor-pointer">
-        <div class="extras absolute z-10 h-12 w-36 shadow-md shadow-black rounded border-2 border-solid bg-[#7289da] top-2 left-2 flex justify-center items-center flex-col"></div>
+        <div class="extras absolute z-10 h-12 w-36 shadow-md shadow-black rounded border-2 border-solid top-2 left-2 flex justify-center items-center flex-col"></div>
         <div class="absolute leading-none inline-block align-middle top-4 right-2 h-10 w-24 font-semibold text-sm text-center text-white bg-[#7289da]">Beaner Name Generator</div>
         <img class="svg right-11 -top-2 relative h-12 w-12" src="./assets/taco.svg">
         <div class="popup">
           <span class="popText text-white bg-green-600 absolute w-32 h-5 text-xs text-center rounded-bottom-15 left-4 bottom-1" id="beanPopup">Name Copied!</span>  <!-- Beaner Name Generator -->
         </div>
+      </div>
+    </div>
+    <div class="absolute gap-x-10 left-1/2 flex flex-wrap flex-row justify-center items-center w-1/2 h-24">
+      <div class="extras z-10 h-20 w-40 relative -top-2 left-0 flex justify-center items-center flex-col cursor-pointer">
+        <div class="extras absolute z-10 h-12 w-36 shadow-md shadow-black rounded border-2 border-solid bg-[#7289da] top-2 left-2 flex justify-center items-center flex-col"></div>
+        <div href="https://arrasio-td.glitch.me/" class="absolute leading-none inline-block align-middle top-4 right-2 h-10 w-24 font-semibold text-sm text-center text-white">Arras Tower Defense (WIP)</div>
+        <img class="svg right-1 top-8 relative h-32 w-32" src="./assets/arrastd.svg">
+      </div>
+      <div class="extras z-10 h-20 w-40 relative -top-2 left-0 flex justify-center items-center flex-col cursor-pointer">
+        <div href="" class="extras absolute z-10 h-12 w-36 shadow-md shadow-black rounded border-2 border-solid bg-[#7289da] top-2 left-2 flex justify-center items-center flex-col"></div>
+        <div class="absolute leading-none inline-block align-middle top-4 right-3 h-12 w-36 font-semibold text-lg text-center text-white">Alternate Webpage</div>
       </div>
     </div>
     <div class="desc flex justify-center items-center w-full h-screen flex-col">
@@ -36,7 +47,7 @@
         <div class="icon"><a href="https://www.reddit.com/user/SpanksMcYeet" target="_blank" class="float h-12 w-12"><img class="reddit" src="./assets/reddit.svg"></a></div>
         <div class="icon"><a href="https://steamcommunity.com/profiles/76561198849964509/" target="_blank" class="float h-12 w-12"><img class="steam" src="./assets/steam.svg"></a></div>
         <div class="icon"><a href="https://github.com/SpanksMcYeet" target="_blank" class="float h-12 w-12"><img class="github" src="./assets/github.svg"></a></div>
-        <div class="icon"><a href="" target="_blank" class="float h-12 w-12"><img class="onlyfans" src="./assets/onlyfans.svg"></a></div> <!--https://onlyfans.com/lunaclles-->
+        <div class="icon"><a href="" target="_blank" class="float h-11 w-11"><img class="onlyfans" src="./assets/gmail.svg"></a></div>
         <div class="icon"><a href="https://open.spotify.com/user/63scmpwlrtoxlryndbspxg5me" target="_blank" class="float h-12 w-12"><img class="spotify" src="./assets/spotify.svg"></a></div>
         <div class="icon"><a href="https://www.youtube.com/channel/UCbXP8fhJp_VDp0nlEcKTE4g" target="_blank" class="float h-12 w-12"><img class="youtube" src="./assets/youtube.svg"></a></div>
         <div class="icon"><a href="https://www.youtube.com/watch?v=xvFZjo5PgG0" target="_blank" class="float h-12 w-12"><img class="discord" src="./assets/discord.svg"></a></div>
@@ -49,5 +60,5 @@
     <div id="gif-button" class="opacity-0 relative"></div>
     <div id="bean-button" class="opacity-0 relative"></div>
   </body>
-  <script src="index.js"></script>
+  <script src="index.js" type="module"></script>
 </html>

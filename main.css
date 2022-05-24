@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 .themebar {
   height: 100%;
   width: 0;
@@ -46,7 +50,7 @@
 .extras {
   animation: fadeIn 1s linear;
   animation-fill-mode: forwards; 
-  animation-delay: 6.5s;
+  animation-delay: 5s;
   opacity: 0;
 }
 @keyframes fadeIn {
@@ -66,7 +70,7 @@
 .luna {
   animation: text 3s ease-in-out;
   animation-fill-mode: forwards; 
-  animation-delay: 0.75s;
+  animation-delay: 0.2s;
 }
 @keyframes text {
   0% {
@@ -83,7 +87,7 @@
 .subL {
   animation: subtextL 3s ease-in-out;
   animation-fill-mode: forwards; 
-  animation-delay: 2s;
+  animation-delay: 1s;
   opacity: 0;
 }
 @keyframes subtextL {
@@ -122,7 +126,7 @@
 .subR {
   animation: subtextR 3s ease-in-out;
   animation-fill-mode: forwards; 
-  animation-delay: 1.8s;
+  animation-delay: 1s;
   opacity: 0;
 }
 @keyframes subtextR {
@@ -219,16 +223,16 @@
 }
 .icon:nth-child(odd) img { opacity: 0; animation: spinInLeft 3s; animation-fill-mode: forwards }
 .icon:nth-child(even) img { opacity: 0; animation: spinInRight 3s; animation-fill-mode: forwards }
-.icon:nth-child(1)  img { animation-delay: 4.0s  }
-.icon:nth-child(2)  img { animation-delay: 4.25s }
-.icon:nth-child(3)  img { animation-delay: 4.5s  }
-.icon:nth-child(4)  img { animation-delay: 4.75s }
-.icon:nth-child(5)  img { animation-delay: 5.0s  }
-.icon:nth-child(6)  img { animation-delay: 5.25s }
-.icon:nth-child(7)  img { animation-delay: 5.5s  }
-.icon:nth-child(8)  img { animation-delay: 5.75s }
-.icon:nth-child(9)  img { animation-delay: 6.0s  }
-.icon:nth-child(10) img { animation-delay: 6.25s }
+.icon:nth-child(1)  img { animation-delay: 3s    }
+.icon:nth-child(2)  img { animation-delay: 3.15s }
+.icon:nth-child(3)  img { animation-delay: 3.3s  }
+.icon:nth-child(4)  img { animation-delay: 3.45s }
+.icon:nth-child(5)  img { animation-delay: 3.6s  }
+.icon:nth-child(6)  img { animation-delay: 3.75s }
+.icon:nth-child(7)  img { animation-delay: 3.9s  }
+.icon:nth-child(8)  img { animation-delay: 4.05s }
+.icon:nth-child(9)  img { animation-delay: 4.2s  }
+.icon:nth-child(10) img { animation-delay: 4.35s }
 .icon:nth-child(1)  { transform: rotate(36deg)  translateX(15rem) rotate(-36deg)  }
 .icon:nth-child(2)  { transform: rotate(72deg)  translateX(15rem) rotate(-72deg)  }
 .icon:nth-child(3)  { transform: rotate(108deg) translateX(15rem) rotate(-108deg) }
@@ -279,16 +283,16 @@
   0%   { transform: rotate(360deg) translateX(15rem) rotate(-360deg) }
   100% { transform: rotate(calc(360deg + 360deg)) translateX(15rem) rotate(calc(-360deg - 360deg)) }
 }
-.icon:nth-child(1)  { animation: spin1 45s ease-in-out infinite;  animation-delay: 6.75s; animation-fill-mode: forwards }
-.icon:nth-child(2)  { animation: spin2 45s ease-in-out infinite;  animation-delay: 6.75s; animation-fill-mode: forwards }
-.icon:nth-child(3)  { animation: spin3 45s ease-in-out infinite;  animation-delay: 6.75s; animation-fill-mode: forwards }
-.icon:nth-child(4)  { animation: spin4 45s ease-in-out infinite;  animation-delay: 6.75s; animation-fill-mode: forwards }
-.icon:nth-child(5)  { animation: spin5 45s ease-in-out infinite;  animation-delay: 6.75s; animation-fill-mode: forwards }
-.icon:nth-child(6)  { animation: spin6 45s ease-in-out infinite;  animation-delay: 6.75s; animation-fill-mode: forwards }
-.icon:nth-child(7)  { animation: spin7 45s ease-in-out infinite;  animation-delay: 6.75s; animation-fill-mode: forwards }
-.icon:nth-child(8)  { animation: spin8 45s ease-in-out infinite;  animation-delay: 6.75s; animation-fill-mode: forwards }
-.icon:nth-child(9)  { animation: spin9 45s ease-in-out infinite;  animation-delay: 6.75s; animation-fill-mode: forwards }
-.icon:nth-child(10) { animation: spin10 45s ease-in-out infinite; animation-delay: 6.75s; animation-fill-mode: forwards }
+.icon:nth-child(1)  { animation: spin1 45s ease-in-out infinite;  animation-delay: 4.5s; animation-fill-mode: forwards }
+.icon:nth-child(2)  { animation: spin2 45s ease-in-out infinite;  animation-delay: 4.5s; animation-fill-mode: forwards }
+.icon:nth-child(3)  { animation: spin3 45s ease-in-out infinite;  animation-delay: 4.5s; animation-fill-mode: forwards }
+.icon:nth-child(4)  { animation: spin4 45s ease-in-out infinite;  animation-delay: 4.5s; animation-fill-mode: forwards }
+.icon:nth-child(5)  { animation: spin5 45s ease-in-out infinite;  animation-delay: 4.5s; animation-fill-mode: forwards }
+.icon:nth-child(6)  { animation: spin6 45s ease-in-out infinite;  animation-delay: 4.5s; animation-fill-mode: forwards }
+.icon:nth-child(7)  { animation: spin7 45s ease-in-out infinite;  animation-delay: 4.5s; animation-fill-mode: forwards }
+.icon:nth-child(8)  { animation: spin8 45s ease-in-out infinite;  animation-delay: 4.5s; animation-fill-mode: forwards }
+.icon:nth-child(9)  { animation: spin9 45s ease-in-out infinite;  animation-delay: 4.5s; animation-fill-mode: forwards }
+.icon:nth-child(10) { animation: spin10 45s ease-in-out infinite; animation-delay: 4.5s; animation-fill-mode: forwards }
 .reddit:hover {
   transition-property: filter;
   transition-duration: 1.25s;
